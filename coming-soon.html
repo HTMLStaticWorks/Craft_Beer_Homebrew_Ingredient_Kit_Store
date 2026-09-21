@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon — Supply Co. | Something Hoppy This Way Comes</title>
+  <meta name="description" content="Supply Co. is brewing up something new. Sign up for early access and be first to know when we launch." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <main id="main-content">
+    <section class="coming-soon" aria-label="Coming Soon">
+      <div class="coming-soon__bg" aria-hidden="true"></div>
+
+      <div class="coming-soon__inner">
+
+        <!-- Logo -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:var(--space-3);margin-block-end:var(--space-8)">
+          <div style="width:48px;height:48px;background-color:var(--color-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem" aria-hidden="true">
+            <i class="ph ph-beer-bottle"></i>
+          </div>
+          <span style="font-family:var(--font-heading);font-size:1.4rem;font-weight:500;color:var(--color-white)">Supply Co.</span>
+        </div>
+
+        <p class="coming-soon__eyebrow">
+          <i class="ph ph-clock" aria-hidden="true"></i>&nbsp; Something Hoppy Is Brewing
+        </p>
+
+        <h1 class="coming-soon__title">We're Getting<br/>Ready to Pour</h1>
+
+        <p class="coming-soon__subtitle">
+          A brand new section of the Supply Co. store is fermenting. Rare ingredients, limited seasonal kits, and exclusive member perks — sign up to be first in line.
+        </p>
+
+        <!-- Countdown -->
+        <div class="coming-soon__countdown" id="countdown" aria-label="Countdown to launch" aria-live="polite">
+          <div class="countdown-unit">
+            <div class="countdown-unit__num" data-days>47</div>
+            <div class="countdown-unit__label">Days</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="countdown-unit__num" data-hours>00</div>
+            <div class="countdown-unit__label">Hours</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="countdown-unit__num" data-minutes>00</div>
+            <div class="countdown-unit__label">Minutes</div>
+          </div>
+          <div class="countdown-unit">
+            <div class="countdown-unit__num" data-seconds>00</div>
+            <div class="countdown-unit__label">Seconds</div>
+          </div>
+        </div>
+
+        <!-- Email Signup -->
+        <form class="coming-soon__form" data-newsletter-form id="coming-soon-form" aria-label="Early access signup">
+          <label for="cs-email" class="sr-only">Email address for early access</label>
+          <input type="email" id="cs-email" name="email" class="coming-soon__input" placeholder="Enter your email for early access" required aria-required="true" />
+          <button type="submit" class="btn btn--primary btn--lg" id="cs-notify-btn">
+            Notify Me <i class="ph ph-bell" aria-hidden="true"></i>
+          </button>
+        </form>
+
+        <div data-newsletter-msg style="display:none;font-size:var(--size-body);color:var(--color-primary-light);margin-block-start:var(--space-4);text-align:center" aria-live="polite"></div>
+
+        <!-- Social -->
+        <div style="display:flex;gap:var(--space-3);justify-content:center;margin-block-start:var(--space-7)" aria-label="Social media links">
+          <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" class="footer__social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        </div>
+
+        <!-- Back link -->
+        <div style="margin-block-start:var(--space-6)">
+          <a href="index.html" style="font-size:var(--size-caption);color:rgba(240,235,224,0.5);transition:color var(--transition)" id="cs-back-btn">
+            ← Back to Supply Co. Main Store
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

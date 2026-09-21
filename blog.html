@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Supply Co. | Homebrewing Tips, Recipes & Technique</title>
+  <meta name="description" content="The Supply Co. blog — beginner guides, advanced technique breakdowns, award-winning recipes, and equipment reviews from our community of passionate homebrewers." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Supply Co. Home">
+        <div class="navbar__logo-mark"><i class="ph ph-beer-bottle"></i></div>
+        <div class="navbar__logo-text">Supply Co.<span>Craft Homebrewing</span></div>
+      </a>
+      <nav class="navbar__nav" aria-label="Main Navigation">
+        <a href="index.html"    class="navbar__link">Home</a>
+        <a href="home2.html"    class="navbar__link">Home 2</a>
+        <a href="about.html"    class="navbar__link">About Us</a>
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="index.html#kits" class="navbar__link">Shop</a>
+        <a href="home2.html#recipe-builder" class="navbar__link">Recipes</a>
+        <a href="blog.html"     class="navbar__link active">Blog</a>
+        <a href="contact.html"  class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode" data-theme-icon>
+          <i class="ph ph-sun icon-sun" style="display:none"></i>
+          <i class="ph ph-moon icon-moon"></i>
+        </button>
+        <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn--primary btn--sm">Login</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="drawer__header">
+      <span class="drawer__logo">Supply Co.</span>
+      <button class="drawer__close" id="drawer-close" aria-label="Close"><i class="ph ph-x"></i></button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html"    class="drawer__link"><i class="ph ph-house"></i> Home</a>
+      <a href="home2.html"    class="drawer__link"><i class="ph ph-house-line"></i> Home 2</a>
+      <a href="about.html"    class="drawer__link"><i class="ph ph-info"></i> About Us</a>
+      <a href="services.html" class="drawer__link"><i class="ph ph-wrench"></i> Services</a>
+      <a href="index.html#kits" class="drawer__link"><i class="ph ph-shopping-bag"></i> Shop</a>
+      <a href="home2.html#recipe-builder" class="drawer__link"><i class="ph ph-book-open"></i> Recipes</a>
+      <a href="blog.html"     class="drawer__link active"><i class="ph ph-newspaper"></i> Blog</a>
+      <a href="contact.html"  class="drawer__link"><i class="ph ph-envelope"></i> Contact</a>
+    </nav>
+    <div class="drawer__footer">
+      <button class="theme-toggle" data-theme-toggle data-theme-icon aria-label="Toggle theme"><i class="ph ph-sun icon-sun" style="display:none"></i><i class="ph ph-moon icon-moon"></i></button>
+      <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      <a href="login.html" class="btn btn--primary" style="flex:1;justify-content:center">Login</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- BLOG HERO + FILTERS -->
+    <section class="blog-hero" aria-labelledby="blog-title">
+      <div class="container">
+        <span class="section-eyebrow">The Brew Journal</span>
+        <h1 class="section-title" id="blog-title" style="margin-block-end:var(--space-3)">Brewing Knowledge, Straight Up</h1>
+        <p class="section-subtitle">Recipes, technique guides, equipment reviews, and stories from our community of passionate homebrewers.</p>
+
+        <div class="blog-filters" role="tablist" aria-label="Filter articles by category">
+          <button class="blog-filter-btn active" data-filter="all" role="tab" aria-selected="true">All Posts</button>
+          <button class="blog-filter-btn" data-filter="beginner" role="tab" aria-selected="false">Beginner</button>
+          <button class="blog-filter-btn" data-filter="advanced" role="tab" aria-selected="false">Advanced</button>
+          <button class="blog-filter-btn" data-filter="recipe" role="tab" aria-selected="false">Recipes</button>
+          <button class="blog-filter-btn" data-filter="equipment" role="tab" aria-selected="false">Equipment</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="blog-grid" aria-label="Blog articles">
+      <div class="container">
+        <div class="blog-grid__layout" id="blog-grid">
+
+          <article class="blog-card reveal" data-category="beginner" aria-label="Article: How to Prevent Off-Flavors">
+            <div class="blog-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1615600950127-2f6a89b5f59f?w=700&q=80&auto=format&fit=crop"
+                   alt="Homebrewer monitoring fermentation with digital thermometer" class="blog-card__img" loading="lazy" width="700" height="400" />
+              <span class="blog-card__tag blog-card__tag--beginner">Beginner</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="ph ph-calendar" aria-hidden="true"></i> Sep 12, 2026</span>
+                <span class="blog-card__author"><i class="ph ph-user" aria-hidden="true"></i> Ellie Chang</span>
+              </div>
+              <h2 class="blog-card__title">How to Prevent Off-Flavors in Your First Batch</h2>
+              <p class="blog-card__excerpt">The 7 most common beginner mistakes and exactly how to avoid them — sanitation, temperature control, and pitching rate all play a role.</p>
+              <a href="blog-single.html" class="blog-card__read" aria-label="Read How to Prevent Off-Flavors">
+                Read Article <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-1" data-category="advanced" aria-label="Article: Dry Hopping Techniques">
+            <div class="blog-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=700&q=80&auto=format&fit=crop"
+                   alt="Hop pellets and cone hops ready for dry hopping" class="blog-card__img" loading="lazy" width="700" height="400" />
+              <span class="blog-card__tag blog-card__tag--advanced">Advanced</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="ph ph-calendar" aria-hidden="true"></i> Aug 28, 2026</span>
+                <span class="blog-card__author"><i class="ph ph-user" aria-hidden="true"></i> Dave Keller</span>
+              </div>
+              <h2 class="blog-card__title">Dry Hopping Techniques: Cold Side vs. Warm Side Tested</h2>
+              <p class="blog-card__excerpt">We ran 12 parallel batches across 6 months. Here's what the data says about IPA aroma and which approach delivers the best results.</p>
+              <a href="blog-single.html" class="blog-card__read" aria-label="Read Dry Hopping Techniques">
+                Read Article <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-2" data-category="recipe" aria-label="Article: Hefeweizen Recipe">
+            <div class="blog-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?w=700&q=80&auto=format&fit=crop"
+                   alt="Hazy wheat beer in a tall glass with lemon garnish" class="blog-card__img" loading="lazy" width="700" height="400" />
+              <span class="blog-card__tag blog-card__tag--recipe">Recipe</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="ph ph-calendar" aria-hidden="true"></i> Aug 15, 2026</span>
+                <span class="blog-card__author"><i class="ph ph-user" aria-hidden="true"></i> Mike Torres</span>
+              </div>
+              <h2 class="blog-card__title">The Perfect Summer Wheat: Our 2026 Hefeweizen Recipe</h2>
+              <p class="blog-card__excerpt">Clove, banana, and a hazy golden glow. This recipe has been brewed over 400 times. This summer, we're sharing it with the world.</p>
+              <a href="blog-single.html" class="blog-card__read" aria-label="Read the Hefeweizen Recipe">
+                Read Article <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" data-category="equipment" aria-label="Article: Fermentation Chamber Guide">
+            <div class="blog-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1580802467462-3b6c36b42e83?w=700&q=80&auto=format&fit=crop"
+                   alt="Temperature-controlled fermentation chamber setup" class="blog-card__img" loading="lazy" width="700" height="400" />
+              <span class="blog-card__tag blog-card__tag--equipment">Equipment</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="ph ph-calendar" aria-hidden="true"></i> Jul 30, 2026</span>
+                <span class="blog-card__author"><i class="ph ph-user" aria-hidden="true"></i> Dave Keller</span>
+              </div>
+              <h2 class="blog-card__title">Do You Really Need a Fermentation Chamber? (Honest Review)</h2>
+              <p class="blog-card__excerpt">Temperature control is the single biggest upgrade you can make to your homebrew quality. Here's what to buy, and what to DIY.</p>
+              <a href="blog-single.html" class="blog-card__read" aria-label="Read about fermentation chambers">
+                Read Article <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-1" data-category="beginner" aria-label="Article: Understanding Water Chemistry">
+            <div class="blog-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7?w=700&q=80&auto=format&fit=crop"
+                   alt="Water minerals and chemistry equipment for homebrewing" class="blog-card__img" loading="lazy" width="700" height="400" />
+              <span class="blog-card__tag blog-card__tag--beginner">Beginner</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="ph ph-calendar" aria-hidden="true"></i> Jul 14, 2026</span>
+                <span class="blog-card__author"><i class="ph ph-user" aria-hidden="true"></i> Ellie Chang</span>
+              </div>
+              <h2 class="blog-card__title">Water Chemistry for Beginners: The Only Guide You Need</h2>
+              <p class="blog-card__excerpt">No PhD required. We break down chloride, sulfate, and pH into plain English — and show you exactly how to adjust your tap water for any style.</p>
+              <a href="blog-single.html" class="blog-card__read" aria-label="Read water chemistry guide">
+                Read Article <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal reveal-delay-2" data-category="recipe" aria-label="Article: Oatmeal Stout Recipe">
+            <div class="blog-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1532634733-cae1395e440f?w=700&q=80&auto=format&fit=crop"
+                   alt="Dark oatmeal stout poured into a glass with foam head" class="blog-card__img" loading="lazy" width="700" height="400" />
+              <span class="blog-card__tag blog-card__tag--recipe">Recipe</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span class="blog-card__date"><i class="ph ph-calendar" aria-hidden="true"></i> Jun 20, 2026</span>
+                <span class="blog-card__author"><i class="ph ph-user" aria-hidden="true"></i> Juno Park</span>
+              </div>
+              <h2 class="blog-card__title">Award-Winning Oatmeal Stout: Community Favorite Recipe</h2>
+              <p class="blog-card__excerpt">Silky chocolate, roasted coffee, and a velvet mouthfeel. This stout took first place at the Pacific NW Homebrew Comp three years running.</p>
+              <a href="blog-single.html" class="blog-card__read" aria-label="Read the Oatmeal Stout recipe">
+                Read Article <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Load More -->
+        <div style="text-align:center;margin-block-start:var(--space-8)">
+          <button class="btn btn--secondary" id="load-more-blog-btn" aria-label="Load more blog posts">
+            <i class="ph ph-arrow-down" aria-hidden="true"></i> Load More Articles
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Supply Co.</div>
+          <p class="footer__brand-desc">Premium craft beer homebrewing ingredients, kits, and education. Built by brewers, for brewers since 2012.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="about.html" class="footer__link">About Us</a></li>
+            <li><a href="services.html" class="footer__link">Services</a></li>
+            <li><a href="blog.html" class="footer__link">Blog</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Resources</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Beginner's Guide</a></li>
+            <li><a href="#" class="footer__link">Recipe Archive</a></li>
+            <li><a href="coming-soon.html" class="footer__link">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Stay Hoppy</h3>
+          <p class="footer__newsletter-text">Seasonal drops, recipes & brewing tips.</p>
+          <form class="footer__newsletter-form" data-newsletter-form>
+            <label for="footer-email-bl" class="sr-only">Email</label>
+            <input type="email" id="footer-email-bl" class="footer__newsletter-input" placeholder="your@email.com" required />
+            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+          </form>
+          <div data-newsletter-msg style="display:none;font-size:var(--size-caption);color:var(--color-primary-light);margin-block-start:var(--space-2)"></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2026 Supply Co. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Privacy Policy</a>
+          <a href="#" class="footer__legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

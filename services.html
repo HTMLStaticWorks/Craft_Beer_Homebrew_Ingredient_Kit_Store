@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Supply Co. | Brew Classes, Equipment & Ingredient Bundles</title>
+  <meta name="description" content="Explore Supply Co.'s homebrewing services — hands-on brew classes for all levels, equipment rental, full ingredient bundles, and flexible pricing plans." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Supply Co. Home">
+        <div class="navbar__logo-mark"><i class="ph ph-beer-bottle"></i></div>
+        <div class="navbar__logo-text">Supply Co.<span>Craft Homebrewing</span></div>
+      </a>
+      <nav class="navbar__nav" aria-label="Main Navigation">
+        <a href="index.html"    class="navbar__link">Home</a>
+        <a href="home2.html"    class="navbar__link">Home 2</a>
+        <a href="about.html"    class="navbar__link">About Us</a>
+        <a href="services.html" class="navbar__link active">Services</a>
+        <a href="index.html#kits" class="navbar__link">Shop</a>
+        <a href="home2.html#recipe-builder" class="navbar__link">Recipes</a>
+        <a href="blog.html"     class="navbar__link">Blog</a>
+        <a href="contact.html"  class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode" data-theme-icon>
+          <i class="ph ph-sun icon-sun" style="display:none"></i>
+          <i class="ph ph-moon icon-moon"></i>
+        </button>
+        <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn--primary btn--sm">Login</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="drawer__header">
+      <span class="drawer__logo">Supply Co.</span>
+      <button class="drawer__close" id="drawer-close" aria-label="Close"><i class="ph ph-x"></i></button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html"    class="drawer__link"><i class="ph ph-house"></i> Home</a>
+      <a href="home2.html"    class="drawer__link"><i class="ph ph-house-line"></i> Home 2</a>
+      <a href="about.html"    class="drawer__link"><i class="ph ph-info"></i> About Us</a>
+      <a href="services.html" class="drawer__link active"><i class="ph ph-wrench"></i> Services</a>
+      <a href="index.html#kits" class="drawer__link"><i class="ph ph-shopping-bag"></i> Shop</a>
+      <a href="home2.html#recipe-builder" class="drawer__link"><i class="ph ph-book-open"></i> Recipes</a>
+      <a href="blog.html"     class="drawer__link"><i class="ph ph-newspaper"></i> Blog</a>
+      <a href="contact.html"  class="drawer__link"><i class="ph ph-envelope"></i> Contact</a>
+    </nav>
+    <div class="drawer__footer">
+      <button class="theme-toggle" data-theme-toggle data-theme-icon aria-label="Toggle theme"><i class="ph ph-sun icon-sun" style="display:none"></i><i class="ph ph-moon icon-moon"></i></button>
+      <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      <a href="login.html" class="btn btn--primary" style="flex:1;justify-content:center">Login</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- SERVICES HERO -->
+    <section class="services-hero" aria-label="Services">
+      <div class="services-hero__content container">
+        <span class="section-eyebrow services-hero__eyebrow">What We Offer</span>
+        <h1 class="services-hero__title">Services Built for<br/>Every Brew Day</h1>
+        <p class="section-subtitle services-hero__subtitle">Classes, bundles, equipment, and community — everything from your first batch to your hundredth.</p>
+      </div>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="services-list section" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">Core Services</span>
+          <h2 class="section-title" id="services-title">How We Help You Brew</h2>
+          <p class="section-subtitle">From first-time brewers to seasoned grain-to-glass veterans, we have a service designed for your level and goals.</p>
+        </header>
+
+        <div class="services-list__grid">
+
+          <article class="service-card reveal" aria-label="Homebrew Classes service">
+            <div class="service-card__icon" aria-hidden="true"><i class="ph ph-graduation-cap"></i></div>
+            <h3 class="service-card__title">Homebrew Classes</h3>
+            <p class="service-card__desc">In-person and online workshops taught by BJCP-certified brewmasters. From sanitation basics to advanced all-grain technique.</p>
+            <ul class="service-card__features" aria-label="Class features">
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> 6 class levels — Beginner to Expert</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Max 8–10 students per session</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> All equipment provided in class</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Online replay access for 30 days</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--sm" id="svc-classes-btn">Book a Class</a>
+          </article>
+
+          <article class="service-card reveal reveal-delay-1" aria-label="Ingredient Bundles service">
+            <div class="service-card__icon" aria-hidden="true"><i class="ph ph-package"></i></div>
+            <h3 class="service-card__title">Ingredient Bundles</h3>
+            <p class="service-card__desc">Curated ingredient kits for specific styles. All grains milled fresh, hops vacuum-sealed, yeast tested and cold-packed for shipment.</p>
+            <ul class="service-card__features">
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> 42 kit styles in stock</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Custom kit builder available</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Subscription bundles save 15%</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Free shipping over $35</li>
+            </ul>
+            <a href="index.html#kits" class="btn btn--primary btn--sm" id="svc-bundles-btn">Shop Kits</a>
+          </article>
+
+          <article class="service-card reveal reveal-delay-2" aria-label="Equipment Rental service">
+            <div class="service-card__icon" aria-hidden="true"><i class="ph ph-wrench"></i></div>
+            <h3 class="service-card__title">Equipment Rental</h3>
+            <p class="service-card__desc">Try before you buy. Rent professional all-grain setups, fermentation chambers, kegging systems, and more for your next brew day.</p>
+            <ul class="service-card__features">
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Sanitized and ready-to-use</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Weekend, week, or monthly rates</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Local pickup or delivery (Portland)</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Tech support included</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--sm" id="svc-rental-btn">Rent Equipment</a>
+          </article>
+
+          <article class="service-card reveal" aria-label="Recipe Consulting service">
+            <div class="service-card__icon" aria-hidden="true"><i class="ph ph-pencil-line"></i></div>
+            <h3 class="service-card__title">Recipe Consulting</h3>
+            <p class="service-card__desc">1-on-1 sessions with our head brewmaster to design your perfect recipe — style, fermentation profile, water chemistry, and hop schedule.</p>
+            <ul class="service-card__features">
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> 60-min private video session</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Full recipe document provided</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Follow-up feedback on brew notes</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Ingredient bundle recommendation</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--sm" id="svc-consult-btn">Book Session</a>
+          </article>
+
+          <article class="service-card reveal reveal-delay-1" aria-label="Brew Club Membership service">
+            <div class="service-card__icon" aria-hidden="true"><i class="ph ph-users-three"></i></div>
+            <h3 class="service-card__title">Brew Club Membership</h3>
+            <p class="service-card__desc">Join our monthly members' club. Exclusive ingredient drops, recipe packs, Discord access, and group brew-alongs every month.</p>
+            <ul class="service-card__features">
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Monthly exclusive ingredient box</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Private Discord community</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Monthly virtual brew-along</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> 10% off all store purchases</li>
+            </ul>
+            <a href="login.html" class="btn btn--primary btn--sm" id="svc-club-btn">Join Club</a>
+          </article>
+
+          <article class="service-card reveal reveal-delay-2" aria-label="Troubleshooting Support service">
+            <div class="service-card__icon" aria-hidden="true"><i class="ph ph-chat-circle-dots"></i></div>
+            <h3 class="service-card__title">Troubleshooting Support</h3>
+            <p class="service-card__desc">Something wrong with your batch? Our team of expert homebrewers is available 7 days a week to diagnose and save your beer.</p>
+            <ul class="service-card__features">
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Live chat (7 days, 8am–10pm PST)</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Photo and video submission</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Off-flavor diagnosis guide</li>
+              <li class="service-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Free for all customers</li>
+            </ul>
+            <a href="contact.html" class="btn btn--primary btn--sm" id="svc-support-btn">Get Help</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing section" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow" style="color:var(--color-primary-light)">Simple Pricing</span>
+          <h2 class="section-title" id="pricing-title" style="color:var(--color-white)">Choose Your Brew Plan</h2>
+          <p class="section-subtitle" style="color:rgba(240,235,224,0.7)">No contracts. Cancel any time. Built for hobbyists and serious brewers alike.</p>
+        </header>
+
+        <div class="pricing__grid">
+
+          <!-- Starter -->
+          <div class="pricing-card reveal">
+            <div class="pricing-card__badge">Starter</div>
+            <h3 class="pricing-card__name">Brew Curious</h3>
+            <div class="pricing-card__price">$0<span>/mo</span></div>
+            <div class="pricing-card__period">Free forever</div>
+            <div class="pricing-card__divider"></div>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Access to free recipe archive</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Community forum access</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Basic troubleshooting chat</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Monthly newsletter & tips</li>
+            </ul>
+            <a href="register.html" class="btn btn--secondary" style="color:#fff;border-color:rgba(255,255,255,0.3);width:100%;justify-content:center" id="pricing-free-btn">Get Started Free</a>
+          </div>
+
+          <!-- Popular -->
+          <div class="pricing-card pricing-card--featured reveal reveal-delay-1">
+            <div class="pricing-card__badge">Most Popular</div>
+            <h3 class="pricing-card__name">Brew Club</h3>
+            <div class="pricing-card__price">$19<span>/mo</span></div>
+            <div class="pricing-card__period">Billed monthly · cancel anytime</div>
+            <div class="pricing-card__divider"></div>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Everything in Brew Curious</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Monthly exclusive ingredient box</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> 10% off all store purchases</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Private Discord community</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Monthly virtual brew-along</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Priority support</li>
+            </ul>
+            <a href="register.html" class="btn btn--dark btn--lg" style="width:100%;justify-content:center" id="pricing-club-btn">Join Brew Club</a>
+          </div>
+
+          <!-- Pro -->
+          <div class="pricing-card reveal reveal-delay-2">
+            <div class="pricing-card__badge">Pro Brewer</div>
+            <h3 class="pricing-card__name">Grain to Glass</h3>
+            <div class="pricing-card__price">$49<span>/mo</span></div>
+            <div class="pricing-card__period">Billed monthly · cancel anytime</div>
+            <div class="pricing-card__divider"></div>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Everything in Brew Club</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> 1 class/month included ($79 value)</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> 1 recipe consulting session/quarter</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> 20% off all store purchases</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Dedicated brewmaster support</li>
+              <li class="pricing-card__feature"><i class="ph ph-check" aria-hidden="true"></i> Early access to new ingredients</li>
+            </ul>
+            <a href="register.html" class="btn btn--primary" style="width:100%;justify-content:center" id="pricing-pro-btn">Go Grain to Glass</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="home-cta" aria-labelledby="services-cta-title">
+      <div class="container">
+        <div class="home-cta__inner">
+          <h2 class="home-cta__title" id="services-cta-title">Not Sure Where to Start?</h2>
+          <p class="home-cta__subtitle">Talk to one of our brewmasters — we'll help you pick the right class, kit, or plan for where you are in your brewing journey.</p>
+          <div class="home-cta__actions">
+            <a href="contact.html" class="btn btn--dark btn--lg" id="services-contact-btn">Talk to a Brewer</a>
+            <a href="index.html#kits" class="btn btn--lg" style="background:rgba(255,255,255,0.12);color:#fff;border:2px solid rgba(255,255,255,0.35);" id="services-shop-btn">Browse Kits</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Supply Co.</div>
+          <p class="footer__brand-desc">Premium craft beer homebrewing ingredients, kits, and education. Built by brewers, for brewers since 2012.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="about.html" class="footer__link">About Us</a></li>
+            <li><a href="services.html" class="footer__link">Services</a></li>
+            <li><a href="blog.html" class="footer__link">Blog</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Resources</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Beginner's Guide</a></li>
+            <li><a href="#" class="footer__link">Recipe Archive</a></li>
+            <li><a href="coming-soon.html" class="footer__link">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Stay Hoppy</h3>
+          <p class="footer__newsletter-text">Seasonal drops, recipes & brewing tips.</p>
+          <form class="footer__newsletter-form" data-newsletter-form>
+            <label for="footer-email-sv" class="sr-only">Email</label>
+            <input type="email" id="footer-email-sv" class="footer__newsletter-input" placeholder="your@email.com" required />
+            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+          </form>
+          <div data-newsletter-msg style="display:none;font-size:var(--size-caption);color:var(--color-primary-light);margin-block-start:var(--space-2)"></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2026 Supply Co. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Privacy Policy</a>
+          <a href="#" class="footer__legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

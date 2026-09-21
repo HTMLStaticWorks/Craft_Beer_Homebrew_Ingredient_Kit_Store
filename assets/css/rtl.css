@@ -1,0 +1,119 @@
+/* ============================================================
+   SUPPLY CO. — RTL Overrides
+   Applied when dir="rtl" is set on <html>
+   ============================================================ */
+
+/* Navbar: logo moves to right, links/actions stay natural via logical props */
+[dir="rtl"] .navbar__logo {
+  margin-inline-end: auto;
+}
+
+[dir="rtl"] .navbar__actions {
+  margin-inline-start: auto;
+}
+
+/* Navbar underline animation flips */
+[dir="rtl"] .navbar__link::after {
+  transform-origin: center;
+}
+
+/* Hamburger: drawer slides from left */
+[dir="rtl"] .drawer {
+  inset-inline-end: auto;
+  inset-inline-start: 0;
+  transform: translateX(-100%);
+  box-shadow: 8px 0 40px rgba(0,0,0,0.2);
+}
+
+[dir="rtl"] .drawer.open {
+  transform: translateX(0);
+}
+
+/* Service card top border flips origin */
+[dir="rtl"] .service-card::before {
+  transform-origin: end;
+}
+
+/* About teaser content padding flips */
+[dir="rtl"] .about-teaser__content {
+  padding-inline-start: 0;
+  padding-inline-end: var(--space-5);
+}
+
+/* Blog single blockquote border flips */
+[dir="rtl"] .blog-single__content blockquote {
+  border-inline-start: none;
+  border-inline-end: 4px solid var(--color-primary);
+  padding-inline-start: 0;
+  padding-inline-end: var(--space-5);
+  margin-inline: var(--space-5);
+}
+
+/* Timeline: RTL flip */
+[dir="rtl"] .timeline__track::before {
+  inset-inline-start: auto;
+  inset-inline-end: 50%;
+  transform: translateX(50%);
+}
+
+/* Footer newsletter form */
+[dir="rtl"] .footer__newsletter-form {
+  flex-direction: row-reverse;
+}
+
+/* Drawer link hover padding flip */
+[dir="rtl"] .drawer__link:hover,
+[dir="rtl"] .drawer__link.active {
+  padding-inline-start: var(--space-3);
+  padding-inline-end: var(--space-4);
+}
+
+/* Hero stats inner direction */
+[dir="rtl"] .hero__eyebrow-line {
+  margin-inline-end: 0;
+  margin-inline-start: var(--space-2);
+}
+
+/* Recipe builder step hover */
+[dir="rtl"] .recipe-builder__step:hover {
+  padding-inline-start: var(--space-3);
+  padding-inline-end: var(--space-2);
+}
+
+/* Blog card read more */
+[dir="rtl"] .blog-card:hover .blog-card__read {
+  gap: var(--space-2);
+  flex-direction: row-reverse;
+}
+
+/* Contact detail flip */
+[dir="rtl"] .contact-detail__icon {
+  flex-shrink: 0;
+}
+
+/* Form checkbox alignment */
+[dir="rtl"] .form-checkbox {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+/* Ingredient card content */
+[dir="rtl"] .ingredient-card__content {
+  text-align: start;
+}
+
+/* Hero2 scroll hint */
+[dir="rtl"] .hero2__scroll-hint {
+  inset-inline-start: auto;
+  inset-inline-end: var(--space-10);
+  flex-direction: row-reverse;
+}
+
+/* Pricing feature items */
+[dir="rtl"] .pricing-card__feature {
+  flex-direction: row-reverse;
+}
+
+/* Blog filters center stays center — no change needed */
+
+/* Auth card inherits logical CSS — no overrides needed */

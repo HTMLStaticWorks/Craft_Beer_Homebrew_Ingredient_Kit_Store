@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Supply Co. | Our Story, Mission & Team</title>
+  <meta name="description" content="Learn the story behind Supply Co. — a homebrewing supply shop built in a garage in 2012, now serving over 4,800 brewers across the Pacific Northwest and beyond." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Supply Co. Home">
+        <div class="navbar__logo-mark"><i class="ph ph-beer-bottle"></i></div>
+        <div class="navbar__logo-text">Supply Co.<span>Craft Homebrewing</span></div>
+      </a>
+      <nav class="navbar__nav" aria-label="Main Navigation">
+        <a href="index.html"    class="navbar__link">Home</a>
+        <a href="home2.html"    class="navbar__link">Home 2</a>
+        <a href="about.html"    class="navbar__link active">About Us</a>
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="index.html#kits" class="navbar__link">Shop</a>
+        <a href="home2.html#recipe-builder" class="navbar__link">Recipes</a>
+        <a href="blog.html"     class="navbar__link">Blog</a>
+        <a href="contact.html"  class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode" data-theme-icon>
+          <i class="ph ph-sun icon-sun" style="display:none"></i>
+          <i class="ph ph-moon icon-moon"></i>
+        </button>
+        <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn--primary btn--sm">Login</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="drawer__header">
+      <span class="drawer__logo">Supply Co.</span>
+      <button class="drawer__close" id="drawer-close" aria-label="Close"><i class="ph ph-x"></i></button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html"    class="drawer__link"><i class="ph ph-house"></i> Home</a>
+      <a href="home2.html"    class="drawer__link"><i class="ph ph-house-line"></i> Home 2</a>
+      <a href="about.html"    class="drawer__link active"><i class="ph ph-info"></i> About Us</a>
+      <a href="services.html" class="drawer__link"><i class="ph ph-wrench"></i> Services</a>
+      <a href="index.html#kits" class="drawer__link"><i class="ph ph-shopping-bag"></i> Shop</a>
+      <a href="home2.html#recipe-builder" class="drawer__link"><i class="ph ph-book-open"></i> Recipes</a>
+      <a href="blog.html"     class="drawer__link"><i class="ph ph-newspaper"></i> Blog</a>
+      <a href="contact.html"  class="drawer__link"><i class="ph ph-envelope"></i> Contact</a>
+    </nav>
+    <div class="drawer__footer">
+      <button class="theme-toggle" data-theme-toggle data-theme-icon aria-label="Toggle theme"><i class="ph ph-sun icon-sun" style="display:none"></i><i class="ph ph-moon icon-moon"></i></button>
+      <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      <a href="login.html" class="btn btn--primary" style="flex:1;justify-content:center">Login</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- ABOUT HERO -->
+    <section class="about-hero" aria-label="About Supply Co.">
+      <div class="about-hero__bg" aria-hidden="true"></div>
+      <div class="container" style="padding-block-start:var(--space-8);padding-block-end:var(--space-8);position:relative;">
+        <div class="about-hero__content">
+          <span class="section-eyebrow about-hero__eyebrow">Our Story</span>
+          <h1 class="about-hero__title">Born in a Garage.<br/>Built for Every Brewer.</h1>
+          <p class="about-hero__subtitle" style="font-size:var(--size-lead);color:rgba(240,235,224,0.75);max-width:580px;line-height:1.65;margin-block-start:var(--space-4)">From a beat-up kettle and a bag of pale malt in 2012, Supply Co. grew into the Pacific Northwest's most beloved homebrewing community and supply hub.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION / VISION -->
+    <section class="mission section" aria-labelledby="mission-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">What Drives Us</span>
+          <h2 class="section-title" id="mission-title">Mission & Vision</h2>
+          <p class="section-subtitle">Everything we do is in service of one goal: making great beer more accessible to every passionate brewer.</p>
+        </header>
+        <div class="mission__grid">
+          <div class="mission-card reveal">
+            <div class="mission-card__icon"><i class="ph ph-target" aria-hidden="true"></i></div>
+            <h3 class="mission-card__title">Our Mission</h3>
+            <p class="mission-card__text">To source and supply the freshest, highest-quality brewing ingredients while fostering a community where knowledge flows as freely as the beer. We exist to lower the barrier between a great idea and a great pint.</p>
+          </div>
+          <div class="mission-card reveal reveal-delay-1">
+            <div class="mission-card__icon"><i class="ph ph-eye" aria-hidden="true"></i></div>
+            <h3 class="mission-card__title">Our Vision</h3>
+            <p class="mission-card__text">A world where every kitchen has a fermentation vessel, every home has a homebrew on tap, and the craft of brewing is passed from neighbor to neighbor like a recipe card — freely and joyfully.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND STORY -->
+    <section class="story section" aria-labelledby="story-title">
+      <div class="container">
+        <div class="story__grid">
+          <div class="reveal">
+            <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=900&q=80&auto=format&fit=crop"
+                 alt="Founder brewing in an original garage setup with copper kettle" class="story__img" loading="lazy" width="900" height="675" />
+          </div>
+          <div class="reveal reveal-delay-1">
+            <span class="section-eyebrow">2012 — Today</span>
+            <h2 class="section-title" id="story-title" style="text-align:start">The Supply Co. Story</h2>
+            <p class="story__text">It started with a conversation between two friends over a mediocre commercial lager. "We can make better than this." That bet turned into a 5-gallon batch of pale ale brewed in a Portland garage — and never looked back.</p>
+            <p class="story__text">Within two years, the garage became a storefront, the storefront became an institution, and the institution became a movement. Today, Supply Co. serves brewers across 38 states, stocks over 320 individual ingredients, and hosts weekly brewing workshops from our flagship location in Portland, OR.</p>
+            <p class="story__text">We've never had a venture capital round, a private equity buyout, or a corporate parent. We're homebrewers who built a shop for homebrewers. Full stop.</p>
+            <a href="contact.html" class="btn btn--primary" style="margin-block-start:var(--space-3)" id="about-contact-btn">
+              Get in Touch <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline section section--alt" aria-labelledby="timeline-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">Our Journey</span>
+          <h2 class="section-title" id="timeline-title">Milestones</h2>
+          <p class="section-subtitle">A decade of grain, hops, and community.</p>
+        </header>
+
+        <div class="timeline__track">
+
+          <div class="timeline__item reveal">
+            <div class="timeline__content timeline__content-right">
+              <h3 class="timeline__content-title">The First Batch</h3>
+              <p class="timeline__content-text">Dave & Mike brew a 5-gallon American Pale Ale in a Portland garage. The bet that started it all.</p>
+            </div>
+            <div class="timeline__year">
+              <div class="timeline__year-dot">2012</div>
+            </div>
+            <div></div>
+          </div>
+
+          <div class="timeline__item reveal reveal-delay-1">
+            <div></div>
+            <div class="timeline__year">
+              <div class="timeline__year-dot">2014</div>
+            </div>
+            <div class="timeline__content timeline__content-left">
+              <h3 class="timeline__content-title">First Retail Location</h3>
+              <p class="timeline__content-text">Supply Co. opens its first brick-and-mortar shop on SE Morrison St. 40 ingredients. 3 kit options.</p>
+            </div>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__content timeline__content-right">
+              <h3 class="timeline__content-title">Classes Launch</h3>
+              <p class="timeline__content-text">First Intro to Homebrewing class sells out in 4 hours. The educational side of Supply Co. is born.</p>
+            </div>
+            <div class="timeline__year">
+              <div class="timeline__year-dot">2016</div>
+            </div>
+            <div></div>
+          </div>
+
+          <div class="timeline__item reveal reveal-delay-1">
+            <div></div>
+            <div class="timeline__year">
+              <div class="timeline__year-dot">2019</div>
+            </div>
+            <div class="timeline__content timeline__content-left">
+              <h3 class="timeline__content-title">Online Store Opens</h3>
+              <p class="timeline__content-text">Supply Co. goes national. 1,000+ orders shipped in the first month. Cold-pack yeast delivery system launched.</p>
+            </div>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__content timeline__content-right">
+              <h3 class="timeline__content-title">Community Milestone</h3>
+              <p class="timeline__content-text">Over 4,800 brewers in our community. 85 tested recipes published. 38 states served.</p>
+            </div>
+            <div class="timeline__year">
+              <div class="timeline__year-dot">2026</div>
+            </div>
+            <div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team section" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">The People</span>
+          <h2 class="section-title" id="team-title">Meet the Brewmasters</h2>
+          <p class="section-subtitle">BJCP-certified, award-winning, and deeply passionate. Our team has brewed thousands of batches — and they're here to help you brew yours.</p>
+        </header>
+
+        <div class="team__grid">
+
+          <article class="team-card reveal" aria-label="Team member Dave Keller">
+            <img src="https://images.unsplash.com/photo-1560250097-0dc05ffefdbb?w=400&q=80&auto=format&fit=crop&facepad=3"
+                 alt="Dave Keller, Co-founder and Head Brewmaster" class="team-card__img" loading="lazy" width="400" height="480" />
+            <div class="team-card__body">
+              <h3 class="team-card__name">Dave Keller</h3>
+              <div class="team-card__role">Co-Founder · Head Brewmaster</div>
+              <p class="team-card__bio">BJCP National Judge. Obsessed with lagers, terroir, and the perfect mash temperature. Has brewed 312 distinct batches.</p>
+            </div>
+          </article>
+
+          <article class="team-card reveal reveal-delay-1" aria-label="Team member Ellie Chang">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&auto=format&fit=crop&facepad=3"
+                 alt="Ellie Chang, Head of Education" class="team-card__img" loading="lazy" width="400" height="480" />
+            <div class="team-card__body">
+              <h3 class="team-card__name">Ellie Chang</h3>
+              <div class="team-card__role">Head of Education</div>
+              <p class="team-card__bio">Former professional brewer turned educator. Designed every class in our curriculum. Makes yeast science actually fun.</p>
+            </div>
+          </article>
+
+          <article class="team-card reveal reveal-delay-2" aria-label="Team member Mike Torres">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80&auto=format&fit=crop&facepad=3"
+                 alt="Mike Torres, Co-founder and Ingredient Sourcer" class="team-card__img" loading="lazy" width="400" height="480" />
+            <div class="team-card__body">
+              <h3 class="team-card__name">Mike Torres</h3>
+              <div class="team-card__role">Co-Founder · Ingredient Sourcer</div>
+              <p class="team-card__bio">Travels to hop farms twice a year to handpick varieties. Has direct relationships with 14 maltsters across NA and Europe.</p>
+            </div>
+          </article>
+
+          <article class="team-card reveal reveal-delay-3" aria-label="Team member Juno Park">
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&q=80&auto=format&fit=crop&facepad=3"
+                 alt="Juno Park, Community & Support Lead" class="team-card__img" loading="lazy" width="400" height="480" />
+            <div class="team-card__body">
+              <h3 class="team-card__name">Juno Park</h3>
+              <div class="team-card__role">Community & Support Lead</div>
+              <p class="team-card__bio">The voice behind every chat support message. Specialist in stuck fermentations, off-flavors, and saying "you've got this."</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="home-cta" aria-labelledby="about-cta-title">
+      <div class="container">
+        <div class="home-cta__inner">
+          <h2 class="home-cta__title" id="about-cta-title">Want to Join the Community?</h2>
+          <p class="home-cta__subtitle">Follow along on social, join our free forum, or take your first class — the Supply Co. community is always pouring.</p>
+          <div class="home-cta__actions">
+            <a href="services.html" class="btn btn--dark btn--lg" id="about-services-btn">View Our Services</a>
+            <a href="contact.html" class="btn btn--lg" style="background:rgba(255,255,255,0.12);color:#fff;border:2px solid rgba(255,255,255,0.35);" id="about-cta-contact-btn">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Supply Co.</div>
+          <p class="footer__brand-desc">Premium craft beer homebrewing ingredients, kits, and education. Built by brewers, for brewers since 2012.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="about.html" class="footer__link">About Us</a></li>
+            <li><a href="services.html" class="footer__link">Services</a></li>
+            <li><a href="blog.html" class="footer__link">Blog</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Resources</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Beginner's Guide</a></li>
+            <li><a href="#" class="footer__link">Recipe Archive</a></li>
+            <li><a href="coming-soon.html" class="footer__link">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Stay Hoppy</h3>
+          <p class="footer__newsletter-text">Seasonal drops, recipes & brewing tips.</p>
+          <form class="footer__newsletter-form" data-newsletter-form>
+            <label for="footer-email-ab" class="sr-only">Email</label>
+            <input type="email" id="footer-email-ab" class="footer__newsletter-input" placeholder="your@email.com" required />
+            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+          </form>
+          <div data-newsletter-msg style="display:none;font-size:var(--size-caption);color:var(--color-primary-light);margin-block-start:var(--space-2)"></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2026 Supply Co. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Privacy Policy</a>
+          <a href="#" class="footer__legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

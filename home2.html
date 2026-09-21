@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supply Co. — Home 2 | Explore Ingredients & Recipes</title>
+  <meta name="description" content="Discover craft brewing ingredients, build your own recipe, and explore the Supply Co. community. A different way to experience homebrewing." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Supply Co. Home">
+        <div class="navbar__logo-mark"><i class="ph ph-beer-bottle"></i></div>
+        <div class="navbar__logo-text">Supply Co.<span>Craft Homebrewing</span></div>
+      </a>
+      <nav class="navbar__nav" aria-label="Main Navigation">
+        <a href="index.html"    class="navbar__link">Home</a>
+        <a href="home2.html"    class="navbar__link active">Home 2</a>
+        <a href="about.html"    class="navbar__link">About Us</a>
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="index.html#kits" class="navbar__link">Shop</a>
+        <a href="#recipe-builder" class="navbar__link">Recipes</a>
+        <a href="blog.html"     class="navbar__link">Blog</a>
+        <a href="contact.html"  class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode" data-theme-icon>
+          <i class="ph ph-sun icon-sun" style="display:none"></i>
+          <i class="ph ph-moon icon-moon"></i>
+        </button>
+        <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL layout">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn--primary btn--sm">Login</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="drawer__header">
+      <span class="drawer__logo">Supply Co.</span>
+      <button class="drawer__close" id="drawer-close" aria-label="Close"><i class="ph ph-x"></i></button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html"    class="drawer__link"><i class="ph ph-house"></i> Home</a>
+      <a href="home2.html"    class="drawer__link active"><i class="ph ph-house-line"></i> Home 2</a>
+      <a href="about.html"    class="drawer__link"><i class="ph ph-info"></i> About Us</a>
+      <a href="services.html" class="drawer__link"><i class="ph ph-wrench"></i> Services</a>
+      <a href="index.html#kits" class="drawer__link"><i class="ph ph-shopping-bag"></i> Shop</a>
+      <a href="#recipe-builder" class="drawer__link"><i class="ph ph-book-open"></i> Recipes</a>
+      <a href="blog.html"     class="drawer__link"><i class="ph ph-newspaper"></i> Blog</a>
+      <a href="contact.html"  class="drawer__link"><i class="ph ph-envelope"></i> Contact</a>
+    </nav>
+    <div class="drawer__footer">
+      <button class="theme-toggle" data-theme-toggle data-theme-icon aria-label="Toggle theme">
+        <i class="ph ph-sun icon-sun" style="display:none"></i>
+        <i class="ph ph-moon icon-moon"></i>
+      </button>
+      <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      <a href="login.html" class="btn btn--primary" style="flex:1;justify-content:center">Login</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════
+         HERO 2 — SPLIT SCREEN + STAGGER FADE
+    ═══════════════════════════════════════ -->
+    <section class="hero2" aria-label="Welcome to Supply Co.">
+      <!-- Left content panel -->
+      <div class="hero2__content">
+        <p class="hero2__eyebrow">
+          <i class="ph ph-beer-bottle" aria-hidden="true"></i>&nbsp; The Homebrewer's Source
+        </p>
+        <h1 class="hero2__title">
+          Every Great<br/>Beer Starts<br/><em style="font-style:italic;color:var(--color-primary-light)">With an Idea.</em>
+        </h1>
+        <p class="hero2__subtitle">
+          We stock the rarest hops, freshest malts, and most adventurous yeasts — so your ideas become legendary batches.
+        </p>
+        <div class="hero2__actions">
+          <a href="index.html#kits" class="btn btn--primary btn--lg" id="hero2-shop-btn" style="width:100%;justify-content:center">
+            <i class="ph ph-shopping-bag-open" aria-hidden="true"></i> Shop Kits
+          </a>
+          <a href="services.html" class="btn btn--lg" style="background:rgba(255,255,255,0.06);color:rgba(240,235,224,0.85);border:1.5px solid rgba(255,255,255,0.2);width:100%;justify-content:center;" id="hero2-classes-btn">
+            Browse Classes
+          </a>
+        </div>
+
+        <div class="hero2__scroll-hint" aria-hidden="true">
+          <span class="hero2__scroll-line"></span>
+          Scroll to explore
+        </div>
+      </div>
+
+      <!-- Right visual panel -->
+      <div class="hero2__visual" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=1200&q=80&auto=format&fit=crop"
+             alt="Homebrewer pouring craft beer from a copper kettle into a glass"
+             class="hero2__img" width="1200" height="900" />
+        <div class="hero2__visual-overlay"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         STATS BAR
+    ═══════════════════════════════════════ -->
+    <section class="stats-bar" aria-label="Supply Co. by the numbers">
+      <div class="container">
+        <div class="stats-bar__grid">
+          <div class="stats-bar__item">
+            <div class="stats-bar__number" data-counter="4800" data-suffix="+">0</div>
+            <div class="stats-bar__label">Happy Brewers</div>
+          </div>
+          <div class="stats-bar__item">
+            <div class="stats-bar__number" data-counter="320" data-suffix="+">0</div>
+            <div class="stats-bar__label">Ingredients Stocked</div>
+          </div>
+          <div class="stats-bar__item">
+            <div class="stats-bar__number" data-counter="85" data-suffix="+">0</div>
+            <div class="stats-bar__label">Tested Recipes</div>
+          </div>
+          <div class="stats-bar__item">
+            <div class="stats-bar__number" data-counter="12">0</div>
+            <div class="stats-bar__label">Years of Craft</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         INGREDIENT SPOTLIGHT
+    ═══════════════════════════════════════ -->
+    <section class="ingredients section" id="ingredients" aria-labelledby="ingredients-title">
+      <div class="container">
+        <div class="ingredients__intro">
+          <div class="ingredients__intro-text">
+            <span class="section-eyebrow">What We Stock</span>
+            <h2 class="section-title" id="ingredients-title">The Ingredient Vault</h2>
+            <p class="section-subtitle" style="text-align:start;margin-inline:0">From classic Hallertau to experimental Cryo hops — every ingredient you'll ever need, sourced at peak freshness.</p>
+          </div>
+          <a href="#" class="btn btn--secondary" id="view-ingredients-btn">View All Ingredients</a>
+        </div>
+
+        <div class="ingredients__grid">
+
+          <div class="ingredient-card reveal">
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80&auto=format&fit=crop"
+                 alt="Fresh green hops cones on a vine" class="ingredient-card__img" loading="lazy" width="600" height="800" />
+            <div class="ingredient-card__overlay"></div>
+            <div class="ingredient-card__content">
+              <div class="ingredient-card__type">Hops</div>
+              <div class="ingredient-card__name">Citra & Mosaic Blend</div>
+              <div class="ingredient-card__desc">Tropical citrus forward. Ideal for NEIPAs and juicy pale ales. 14.2% AA.</div>
+            </div>
+          </div>
+
+          <div class="ingredient-card reveal reveal-delay-1">
+            <img src="https://images.unsplash.com/photo-1627484986560-a9d2e9a7c1c6?w=600&q=80&auto=format&fit=crop"
+                 alt="Golden malt barley grains in a wooden scoop" class="ingredient-card__img" loading="lazy" width="600" height="800" />
+            <div class="ingredient-card__overlay"></div>
+            <div class="ingredient-card__content">
+              <div class="ingredient-card__type">Malt</div>
+              <div class="ingredient-card__name">Maris Otter Pale Malt</div>
+              <div class="ingredient-card__desc">Classic English base malt. Biscuity, rich, and deeply malty. Fresh-milled to order.</div>
+            </div>
+          </div>
+
+          <div class="ingredient-card reveal reveal-delay-2">
+            <img src="https://images.unsplash.com/photo-1615600950127-2f6a89b5f59f?w=600&q=80&auto=format&fit=crop"
+                 alt="Yeast culture in a laboratory flask" class="ingredient-card__img" loading="lazy" width="600" height="800" />
+            <div class="ingredient-card__overlay"></div>
+            <div class="ingredient-card__content">
+              <div class="ingredient-card__type">Yeast</div>
+              <div class="ingredient-card__name">WY1968 London ESB</div>
+              <div class="ingredient-card__desc">Fruity, mineral ester profile. Perfect for English ales and bitters. Cold-shipped.</div>
+            </div>
+          </div>
+
+          <div class="ingredient-card reveal reveal-delay-3">
+            <img src="https://images.unsplash.com/photo-1580802467462-3b6c36b42e83?w=600&q=80&auto=format&fit=crop"
+                 alt="Brewing adjuncts including oats, wheat, and specialty grains" class="ingredient-card__img" loading="lazy" width="600" height="800" />
+            <div class="ingredient-card__overlay"></div>
+            <div class="ingredient-card__content">
+              <div class="ingredient-card__type">Adjuncts</div>
+              <div class="ingredient-card__name">Flaked Oats & Wheat</div>
+              <div class="ingredient-card__desc">Silky body builders. Ideal for hazy IPAs, stouts, and hefeweizens. Organic available.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         INTERACTIVE RECIPE BUILDER
+    ═══════════════════════════════════════ -->
+    <section class="recipe-builder section" id="recipe-builder" aria-labelledby="recipe-builder-title">
+      <div class="container">
+        <div class="recipe-builder__grid">
+
+          <div class="recipe-builder__content">
+            <span class="section-eyebrow">Recipe Lab</span>
+            <h2 class="section-title" id="recipe-builder-title" style="text-align:start">Build Your Brew Profile</h2>
+            <p class="section-subtitle" style="text-align:start;margin-inline:0;margin-block-end:var(--space-5)">
+              Choose a beer style below to instantly generate a suggested ingredient profile. Our database has 85+ curated recipes ready to brew.
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:var(--space-3);margin-block-end:var(--space-6)">
+              <li style="display:flex;gap:var(--space-3);align-items:flex-start">
+                <i class="ph ph-check-circle" style="color:var(--color-accent);font-size:1.1rem;margin-block-start:2px;flex-shrink:0" aria-hidden="true"></i>
+                <span style="font-size:var(--size-body);color:var(--color-text-muted)"><strong style="color:var(--color-text)">Beginner to Advanced</strong> — every style from Lager to Lambic.</span>
+              </li>
+              <li style="display:flex;gap:var(--space-3);align-items:flex-start">
+                <i class="ph ph-check-circle" style="color:var(--color-accent);font-size:1.1rem;margin-block-start:2px;flex-shrink:0" aria-hidden="true"></i>
+                <span style="font-size:var(--size-body);color:var(--color-text-muted)"><strong style="color:var(--color-text)">One-click cart</strong> — add all ingredients for a recipe directly to your order.</span>
+              </li>
+              <li style="display:flex;gap:var(--space-3);align-items:flex-start">
+                <i class="ph ph-check-circle" style="color:var(--color-accent);font-size:1.1rem;margin-block-start:2px;flex-shrink:0" aria-hidden="true"></i>
+                <span style="font-size:var(--size-body);color:var(--color-text-muted)"><strong style="color:var(--color-text)">Community ratings</strong> — see what other brewers made and loved.</span>
+              </li>
+            </ul>
+            <a href="#" class="btn btn--accent" id="explore-recipes-btn">
+              <i class="ph ph-book-open" aria-hidden="true"></i> Explore Full Recipe Archive
+            </a>
+          </div>
+
+          <div class="recipe-builder__widget reveal">
+            <h3 class="recipe-builder__widget-title">🍺 Recipe Style Picker</h3>
+
+            <div class="recipe-builder__step" data-recipe="lager" tabindex="0" role="button" aria-pressed="false">
+              <div class="recipe-builder__step-num">1</div>
+              <span class="recipe-builder__step-label">American Lager</span>
+              <span class="recipe-builder__step-value">Easy · 4.2% ABV</span>
+            </div>
+
+            <div class="recipe-builder__step" data-recipe="ipa" tabindex="0" role="button" aria-pressed="false">
+              <div class="recipe-builder__step-num">2</div>
+              <span class="recipe-builder__step-label">West Coast IPA</span>
+              <span class="recipe-builder__step-value">Intermediate · 6.8% ABV</span>
+            </div>
+
+            <div class="recipe-builder__step" data-recipe="stout" tabindex="0" role="button" aria-pressed="false">
+              <div class="recipe-builder__step-num">3</div>
+              <span class="recipe-builder__step-label">Dry Irish Stout</span>
+              <span class="recipe-builder__step-value">Intermediate · 4.5% ABV</span>
+            </div>
+
+            <div class="recipe-builder__step" data-recipe="wheat" tabindex="0" role="button" aria-pressed="false">
+              <div class="recipe-builder__step-num">4</div>
+              <span class="recipe-builder__step-label">Hefeweizen Wheat</span>
+              <span class="recipe-builder__step-value">Easy · 5.1% ABV</span>
+            </div>
+
+            <div class="recipe-builder__output" id="recipe-output" aria-live="polite" aria-label="Suggested recipe">
+              <div class="recipe-builder__output-label">Suggested Recipe</div>
+              <div class="recipe-builder__output-title"></div>
+              <div class="recipe-builder__output-details"></div>
+              <div style="margin-block-start:var(--space-3)">
+                <a href="#" class="btn btn--primary btn--sm" id="recipe-order-btn">Order Ingredients</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         BLOG PREVIEW (Home 2 — horizontal cards)
+    ═══════════════════════════════════════ -->
+    <section class="section" style="background-color:var(--color-secondary)" aria-labelledby="h2-blog-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow" style="color:var(--color-primary-light)">Fresh from the Blog</span>
+          <h2 class="section-title" id="h2-blog-title" style="color:var(--color-white)">Brewing Knowledge, Straight Up</h2>
+          <p class="section-subtitle" style="color:rgba(240,235,224,0.7)">Recipes, technique breakdowns, and brew stories from our community of passionate homebrewers.</p>
+        </header>
+
+        <div class="grid-3" id="h2-blog-grid">
+
+          <article class="card reveal" style="background-color:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1)">
+            <img src="https://images.unsplash.com/photo-1615600950127-2f6a89b5f59f?w=700&q=80&auto=format&fit=crop"
+                 alt="Homebrewer taking notes while monitoring fermentation" class="card__img" loading="lazy" width="700" height="438" />
+            <div class="card__body">
+              <span class="card__eyebrow" style="color:var(--color-primary-light)">Beginner</span>
+              <h3 class="card__title" style="color:var(--color-white)">How to Prevent Off-Flavors in Your First Batch</h3>
+              <p class="card__text" style="color:rgba(240,235,224,0.65)">The 7 most common beginner mistakes and exactly how to avoid them. Saves you from pouring your first batch down the drain.</p>
+              <a href="blog-single.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Read about preventing off-flavors">Read Article</a>
+            </div>
+          </article>
+
+          <article class="card reveal reveal-delay-1" style="background-color:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1)">
+            <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=700&q=80&auto=format&fit=crop"
+                 alt="Close-up of hop pellets and cones in a brewing vessel" class="card__img" loading="lazy" width="700" height="438" />
+            <div class="card__body">
+              <span class="card__eyebrow" style="color:var(--color-primary-light)">Advanced</span>
+              <h3 class="card__title" style="color:var(--color-white)">Dry Hopping Techniques: Cold Side vs. Warm Side</h3>
+              <p class="card__text" style="color:rgba(240,235,224,0.65)">We tested both methods across 12 batches. Here's exactly what the data says — and which approach wins for juicy IPA aroma.</p>
+              <a href="blog-single.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Read about dry hopping techniques">Read Article</a>
+            </div>
+          </article>
+
+          <article class="card reveal reveal-delay-2" style="background-color:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1)">
+            <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?w=700&q=80&auto=format&fit=crop"
+                 alt="Craft beer tasting flight with different beer styles" class="card__img" loading="lazy" width="700" height="438" />
+            <div class="card__body">
+              <span class="card__eyebrow" style="color:var(--color-primary-light)">Recipe</span>
+              <h3 class="card__title" style="color:var(--color-white)">The Perfect Summer Wheat: Our 2026 Hefeweizen Recipe</h3>
+              <p class="card__text" style="color:rgba(240,235,224,0.65)">Clove, banana, and a hazy summer glow. This recipe has been brewed over 400 times by our community. Now it's yours.</p>
+              <a href="blog-single.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Read the Hefeweizen recipe">Read Article</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div style="text-align:center;margin-block-start:var(--space-7)">
+          <a href="blog.html" class="btn btn--primary" id="h2-view-blog-btn">View All Articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="home-cta" aria-labelledby="h2-cta-title">
+      <div class="container">
+        <div class="home-cta__inner">
+          <h2 class="home-cta__title" id="h2-cta-title">Ready to Brew Something Legendary?</h2>
+          <p class="home-cta__subtitle">Whether it's your first batch or your hundredth — Supply Co. has everything you need to make it great.</p>
+          <div class="home-cta__actions">
+            <a href="index.html#kits" class="btn btn--dark btn--lg" id="h2-cta-btn">Browse Our Shop</a>
+            <a href="contact.html" class="btn btn--lg" style="background:rgba(255,255,255,0.12);color:#fff;border:2px solid rgba(255,255,255,0.35);" id="h2-contact-btn">Talk to a Brewer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Supply Co.</div>
+          <p class="footer__brand-desc">Premium craft beer homebrewing ingredients, kits, and education. Built by brewers, for brewers since 2012.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="about.html" class="footer__link">About Us</a></li>
+            <li><a href="services.html" class="footer__link">Services</a></li>
+            <li><a href="blog.html" class="footer__link">Blog</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Resources</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Beginner's Guide</a></li>
+            <li><a href="#" class="footer__link">Recipe Archive</a></li>
+            <li><a href="#" class="footer__link">Brew Calculator</a></li>
+            <li><a href="coming-soon.html" class="footer__link">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Stay Hoppy</h3>
+          <p class="footer__newsletter-text">Get seasonal drops, recipes & brewing tips.</p>
+          <form class="footer__newsletter-form" data-newsletter-form>
+            <label for="footer-email-h2" class="sr-only">Email</label>
+            <input type="email" id="footer-email-h2" class="footer__newsletter-input" placeholder="your@email.com" required />
+            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+          </form>
+          <div data-newsletter-msg style="display:none;font-size:var(--size-caption);color:var(--color-primary-light);margin-block-start:var(--space-2)"></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2026 Supply Co. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Privacy Policy</a>
+          <a href="#" class="footer__legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

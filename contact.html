@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Supply Co. | Talk to a Brewer</title>
+  <meta name="description" content="Get in touch with the Supply Co. team. Book a class, ask a brewing question, or visit our Portland shop. We're here 7 days a week." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Supply Co. Home">
+        <div class="navbar__logo-mark"><i class="ph ph-beer-bottle"></i></div>
+        <div class="navbar__logo-text">Supply Co.<span>Craft Homebrewing</span></div>
+      </a>
+      <nav class="navbar__nav" aria-label="Main Navigation">
+        <a href="index.html"    class="navbar__link">Home</a>
+        <a href="home2.html"    class="navbar__link">Home 2</a>
+        <a href="about.html"    class="navbar__link">About Us</a>
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="index.html#kits" class="navbar__link">Shop</a>
+        <a href="home2.html#recipe-builder" class="navbar__link">Recipes</a>
+        <a href="blog.html"     class="navbar__link">Blog</a>
+        <a href="contact.html"  class="navbar__link active">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode" data-theme-icon>
+          <i class="ph ph-sun icon-sun" style="display:none"></i>
+          <i class="ph ph-moon icon-moon"></i>
+        </button>
+        <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn--primary btn--sm">Login</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="drawer__header">
+      <span class="drawer__logo">Supply Co.</span>
+      <button class="drawer__close" id="drawer-close" aria-label="Close"><i class="ph ph-x"></i></button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html"    class="drawer__link"><i class="ph ph-house"></i> Home</a>
+      <a href="home2.html"    class="drawer__link"><i class="ph ph-house-line"></i> Home 2</a>
+      <a href="about.html"    class="drawer__link"><i class="ph ph-info"></i> About Us</a>
+      <a href="services.html" class="drawer__link"><i class="ph ph-wrench"></i> Services</a>
+      <a href="index.html#kits" class="drawer__link"><i class="ph ph-shopping-bag"></i> Shop</a>
+      <a href="home2.html#recipe-builder" class="drawer__link"><i class="ph ph-book-open"></i> Recipes</a>
+      <a href="blog.html"     class="drawer__link"><i class="ph ph-newspaper"></i> Blog</a>
+      <a href="contact.html"  class="drawer__link active"><i class="ph ph-envelope"></i> Contact</a>
+    </nav>
+    <div class="drawer__footer">
+      <button class="theme-toggle" data-theme-toggle data-theme-icon aria-label="Toggle theme"><i class="ph ph-sun icon-sun" style="display:none"></i><i class="ph ph-moon icon-moon"></i></button>
+      <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      <a href="login.html" class="btn btn--primary" style="flex:1;justify-content:center">Login</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- Page Header -->
+    <div style="background-color:var(--color-bg-alt);padding-block-start:calc(var(--navbar-height) + var(--space-8));padding-block-end:var(--space-8);text-align:center">
+      <div class="container">
+        <span class="section-eyebrow">Get in Touch</span>
+        <h1 class="section-title" style="margin-block-end:var(--space-3)">Talk to a Brewer</h1>
+        <p class="section-subtitle">Questions, class bookings, ingredient inquiries — our team responds within a few hours, 7 days a week.</p>
+      </div>
+    </div>
+
+    <!-- CONTACT CONTENT -->
+    <section class="contact-page" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-page__grid">
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h2 class="contact-info__title" id="contact-heading">Let's Connect</h2>
+            <p class="contact-info__text">Whether you want to book a class, ask a brewing question, partner with us, or just say hello — we'd love to hear from you. Drop a message and one of our team members will reply personally.</p>
+
+            <div class="contact-details">
+
+              <div class="contact-detail">
+                <div class="contact-detail__icon" aria-hidden="true">
+                  <i class="ph ph-map-pin"></i>
+                </div>
+                <div>
+                  <div class="contact-detail__label">Visit Us</div>
+                  <div class="contact-detail__value">742 SE Morrison St.<br/>Portland, OR 97214</div>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail__icon" aria-hidden="true">
+                  <i class="ph ph-phone"></i>
+                </div>
+                <div>
+                  <div class="contact-detail__label">Call or Text</div>
+                  <div class="contact-detail__value"><a href="tel:+15033471822" style="color:var(--color-text)">(503) 347-1822</a></div>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail__icon" aria-hidden="true">
+                  <i class="ph ph-envelope"></i>
+                </div>
+                <div>
+                  <div class="contact-detail__label">Email Us</div>
+                  <div class="contact-detail__value"><a href="mailto:hello@supplyco.brew" style="color:var(--color-text)">hello@supplyco.brew</a></div>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail__icon" aria-hidden="true">
+                  <i class="ph ph-clock"></i>
+                </div>
+                <div>
+                  <div class="contact-detail__label">Shop Hours</div>
+                  <div class="contact-detail__value">Mon–Fri: 10am–7pm<br/>Sat–Sun: 10am–5pm (PST)</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Social Links -->
+            <div style="margin-block-bottom:var(--space-5)">
+              <div style="font-size:var(--size-caption);font-weight:var(--weight-label);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-block-end:var(--space-3)">Follow Along</div>
+              <div style="display:flex;gap:var(--space-2)">
+                <a href="#" class="footer__social-link" aria-label="Instagram" style="background:var(--color-bg-alt);border-color:var(--color-border);color:var(--color-text)"><i class="ph ph-instagram-logo"></i></a>
+                <a href="#" class="footer__social-link" aria-label="Facebook" style="background:var(--color-bg-alt);border-color:var(--color-border);color:var(--color-text)"><i class="ph ph-facebook-logo"></i></a>
+                <a href="#" class="footer__social-link" aria-label="YouTube" style="background:var(--color-bg-alt);border-color:var(--color-border);color:var(--color-text)"><i class="ph ph-youtube-logo"></i></a>
+                <a href="#" class="footer__social-link" aria-label="Pinterest" style="background:var(--color-bg-alt);border-color:var(--color-border);color:var(--color-text)"><i class="ph ph-pinterest-logo"></i></a>
+              </div>
+            </div>
+
+            <!-- Map -->
+            <div class="contact-map" aria-label="Supply Co. location map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.6!2d-122.6584!3d45.5234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDMxJzI0LjMiTiAxMjLCsDM5JzI5LjkiVw!5e0!3m2!1sen!2sus!4v1"
+                title="Supply Co. Portland location map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap reveal">
+            <h3 class="contact-form-wrap__title">Send Us a Message</h3>
+
+            <form id="contact-form" novalidate aria-label="Contact form">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">First Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your first name" autocomplete="given-name" required aria-required="true" />
+                  <div class="form-error" id="contact-name-error" role="alert" aria-live="polite"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-lname">Last Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="contact-lname" name="lname" class="form-input" placeholder="Your last name" autocomplete="family-name" required aria-required="true" />
+                  <div class="form-error" id="contact-lname-error" role="alert" aria-live="polite"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" required aria-required="true" />
+                <div class="form-error" id="contact-email-error" role="alert" aria-live="polite"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject <span aria-hidden="true">*</span></label>
+                <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="What's this about?" required aria-required="true" />
+                <div class="form-error" id="contact-subject-error" role="alert" aria-live="polite"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-type">Inquiry Type</label>
+                <select id="contact-type" name="type" class="form-input form-select">
+                  <option value="">Select an inquiry type</option>
+                  <option value="class">Book a Class</option>
+                  <option value="order">Order Support</option>
+                  <option value="recipe">Recipe Question</option>
+                  <option value="consulting">Recipe Consulting</option>
+                  <option value="wholesale">Wholesale Inquiry</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message <span aria-hidden="true">*</span></label>
+                <textarea id="contact-message" name="message" class="form-textarea" placeholder="Tell us what's on your mind. The more detail, the better we can help." required aria-required="true"></textarea>
+                <div class="form-error" id="contact-message-error" role="alert" aria-live="polite"></div>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;margin-block-start:var(--space-2)" id="contact-submit-btn">
+                <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+                Send Message
+              </button>
+
+              <div class="form-success" id="contact-success" role="status" aria-live="polite">
+                <i class="ph ph-check-circle" aria-hidden="true"></i>
+                Your message has been sent! We'll get back to you within a few hours.
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">Supply Co.</div>
+          <p class="footer__brand-desc">Premium craft beer homebrewing ingredients, kits, and education. Built by brewers, for brewers since 2012.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="about.html" class="footer__link">About Us</a></li>
+            <li><a href="services.html" class="footer__link">Services</a></li>
+            <li><a href="blog.html" class="footer__link">Blog</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Resources</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Beginner's Guide</a></li>
+            <li><a href="#" class="footer__link">Recipe Archive</a></li>
+            <li><a href="coming-soon.html" class="footer__link">Coming Soon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Stay Hoppy</h3>
+          <p class="footer__newsletter-text">Seasonal drops, recipes & brewing tips.</p>
+          <form class="footer__newsletter-form" data-newsletter-form>
+            <label for="footer-email-ct" class="sr-only">Email</label>
+            <input type="email" id="footer-email-ct" class="footer__newsletter-input" placeholder="your@email.com" required />
+            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+          </form>
+          <div data-newsletter-msg style="display:none;font-size:var(--size-caption);color:var(--color-primary-light);margin-block-start:var(--space-2)"></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2026 Supply Co. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Privacy Policy</a>
+          <a href="#" class="footer__legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

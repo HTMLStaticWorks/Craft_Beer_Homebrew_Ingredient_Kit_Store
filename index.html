@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supply Co. — Craft Beer Homebrewing Ingredients & Kits</title>
+  <meta name="description" content="Supply Co. is your premium craft beer homebrewing shop. Discover brewing kits, rare ingredients, equipment, and hands-on brew classes for beginners and experts." />
+  <link rel="canonical" href="https://supplyco.brew/" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Supply Co.",
+    "description": "Premium craft beer homebrewing ingredients, kits, and classes.",
+    "url": "https://supplyco.brew/",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+    "priceRange": "$$",
+    "@id": "https://supplyco.brew/"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <header class="navbar navbar--hero" id="navbar" role="banner">
+    <div class="container navbar__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="navbar__logo" aria-label="Supply Co. Home">
+        <div class="navbar__logo-mark" aria-hidden="true">
+          <i class="ph ph-beer-bottle"></i>
+        </div>
+        <div class="navbar__logo-text">
+          Supply Co.
+          <span>Craft Homebrewing</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="navbar__nav" aria-label="Main Navigation">
+        <a href="index.html"    class="navbar__link active">Home</a>
+        <a href="home2.html"    class="navbar__link">Home 2</a>
+        <a href="about.html"    class="navbar__link">About Us</a>
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="#kits"         class="navbar__link">Shop</a>
+        <a href="#recipes"      class="navbar__link">Recipes</a>
+        <a href="blog.html"     class="navbar__link">Blog</a>
+        <a href="contact.html"  class="navbar__link">Contact</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="navbar__actions">
+        <!-- Theme Toggle (desktop only) -->
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode" data-theme-icon>
+          <i class="ph ph-sun icon-sun" style="display:none"></i>
+          <i class="ph ph-moon icon-moon"></i>
+        </button>
+        <!-- RTL Toggle -->
+        <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL layout">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <!-- Login -->
+        <a href="login.html" class="btn btn--primary btn--sm" id="nav-login-btn">Login</a>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Slide Drawer -->
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+    <div class="drawer__header">
+      <span class="drawer__logo">Supply Co.</span>
+      <button class="drawer__close" id="drawer-close" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer__nav" aria-label="Mobile Navigation">
+      <a href="index.html"    class="drawer__link active"><i class="ph ph-house"></i> Home</a>
+      <a href="home2.html"    class="drawer__link"><i class="ph ph-house-line"></i> Home 2</a>
+      <a href="about.html"    class="drawer__link"><i class="ph ph-info"></i> About Us</a>
+      <a href="services.html" class="drawer__link"><i class="ph ph-wrench"></i> Services</a>
+      <a href="#kits"         class="drawer__link"><i class="ph ph-shopping-bag"></i> Shop</a>
+      <a href="#recipes"      class="drawer__link"><i class="ph ph-book-open"></i> Recipes</a>
+      <a href="blog.html"     class="drawer__link"><i class="ph ph-newspaper"></i> Blog</a>
+      <a href="contact.html"  class="drawer__link"><i class="ph ph-envelope"></i> Contact</a>
+    </nav>
+    <div class="drawer__footer">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode" data-theme-icon>
+        <i class="ph ph-sun icon-sun" style="display:none"></i>
+        <i class="ph ph-moon icon-moon"></i>
+      </button>
+      <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+      <a href="login.html" class="btn btn--primary" style="flex:1;justify-content:center">Login</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════
+         HERO — Parallax + Typewriter
+    ═══════════════════════════════════════ -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg" id="hero-bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__eyebrow">
+            <span class="hero__eyebrow-line" aria-hidden="true"></span>
+            Small Batch · Big Flavor
+          </div>
+
+          <h1 class="hero__title">
+            Brew Your <em data-typewriter
+              data-words='["Best Batch","Next IPA","Perfect Stout","Own Story"]'>Best Batch</em>
+          </h1>
+
+          <p class="hero__subtitle">
+            Premium homebrewing ingredients, expert-curated kits, and hands-on classes — everything the modern homebrewer needs to craft extraordinary beer.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#kits" class="btn btn--primary btn--lg" id="hero-shop-btn">
+              <i class="ph ph-shopping-bag-open" aria-hidden="true"></i>
+              Shop Brew Kits
+            </a>
+            <a href="services.html" class="btn btn--secondary btn--lg" id="hero-classes-btn" style="color:#fff;border-color:rgba(255,255,255,0.5);">
+              Explore Classes
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats bar at bottom of hero -->
+      <div class="hero__stats">
+        <div class="container">
+          <div class="hero__stats-inner">
+            <div>
+              <div class="hero__stat-number" data-counter="4800" data-suffix="+">0+</div>
+              <div class="hero__stat-label">Happy Brewers</div>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div>
+              <div class="hero__stat-number" data-counter="320" data-suffix="+">0+</div>
+              <div class="hero__stat-label">Ingredients</div>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div>
+              <div class="hero__stat-number" data-counter="85" data-suffix="+">0+</div>
+              <div class="hero__stat-label">Brew Recipes</div>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div>
+              <div class="hero__stat-number" data-counter="12">0</div>
+              <div class="hero__stat-label">Years of Craft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FEATURED BREW KITS
+    ═══════════════════════════════════════ -->
+    <section class="kits section" id="kits" aria-labelledby="kits-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">Curated Kits</span>
+          <h2 class="section-title" id="kits-title">Start Brewing Today</h2>
+          <p class="section-subtitle">Everything you need in one box — from grain to glass. Our kits are designed with beginner guidance and expert results.</p>
+        </header>
+
+        <div class="kits__grid" id="kits-grid">
+
+          <!-- Kit 1 -->
+          <article class="kit-card reveal" aria-label="American Pale Ale Starter Kit">
+            <div class="kit-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=700&q=80&auto=format&fit=crop"
+                   alt="Craft brewing hops and malt ingredients for American Pale Ale kit"
+                   class="kit-card__img" loading="lazy" width="700" height="440" />
+              <span class="kit-card__badge">Best Seller</span>
+            </div>
+            <div class="kit-card__body">
+              <span class="kit-card__category">Beginner Friendly</span>
+              <h3 class="kit-card__name">American Pale Ale Starter</h3>
+              <p class="kit-card__desc">Crisp, refreshing and forgiving — the perfect first brew. Includes Cascade hops, pale malt, ale yeast, and full step-by-step guide.</p>
+              <div class="kit-card__footer">
+                <div class="kit-card__price">
+                  $49<span class="kit-card__price-sub">Makes 5 gal</span>
+                </div>
+                <a href="#" class="btn btn--primary btn--sm" aria-label="Add American Pale Ale Starter Kit to cart">Add to Cart</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kit 2 -->
+          <article class="kit-card reveal reveal-delay-1" aria-label="West Coast IPA All-Grain Kit">
+            <div class="kit-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?w=700&q=80&auto=format&fit=crop"
+                   alt="West Coast IPA brewing ingredients with Centennial and Citra hops"
+                   class="kit-card__img" loading="lazy" width="700" height="440" />
+              <span class="kit-card__badge" style="background:var(--color-accent)">New Hop</span>
+            </div>
+            <div class="kit-card__body">
+              <span class="kit-card__category">All-Grain · Intermediate</span>
+              <h3 class="kit-card__name">West Coast IPA All-Grain</h3>
+              <p class="kit-card__desc">Resinous, bitter, and crystal clear. Centennial + Citra hop combo with a dry malt backbone. A West Coast classic, brewed at home.</p>
+              <div class="kit-card__footer">
+                <div class="kit-card__price">
+                  $74<span class="kit-card__price-sub">Makes 5 gal</span>
+                </div>
+                <a href="#" class="btn btn--primary btn--sm" aria-label="Add West Coast IPA Kit to cart">Add to Cart</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kit 3 -->
+          <article class="kit-card reveal reveal-delay-2" aria-label="Oatmeal Stout Premium Kit">
+            <div class="kit-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7?w=700&q=80&auto=format&fit=crop"
+                   alt="Dark oatmeal stout craft beer in glass with malt grains"
+                   class="kit-card__img" loading="lazy" width="700" height="440" />
+            </div>
+            <div class="kit-card__body">
+              <span class="kit-card__category">Advanced · Dark</span>
+              <h3 class="kit-card__name">Oatmeal Stout Premium</h3>
+              <p class="kit-card__desc">Silky chocolate and roasted coffee notes. Flaked oats, chocolate malt, and Fuggles hops create a velvety dark stout experience.</p>
+              <div class="kit-card__footer">
+                <div class="kit-card__price">
+                  $89<span class="kit-card__price-sub">Makes 5 gal</span>
+                </div>
+                <a href="#" class="btn btn--primary btn--sm" aria-label="Add Oatmeal Stout Kit to cart">Add to Cart</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div style="text-align:center;margin-block-start:var(--space-7)">
+          <a href="#" class="btn btn--secondary" id="view-all-kits-btn">
+            View All 42 Kits <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         BREW CLASSES
+    ═══════════════════════════════════════ -->
+    <section class="brew-classes section" id="classes" aria-labelledby="classes-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">Learn to Brew</span>
+          <h2 class="section-title" id="classes-title">Hands-On Brew Classes</h2>
+          <p class="section-subtitle" style="color:rgba(240,235,224,0.7)">From first pour to full grain bill — our in-person and live-stream classes are led by award-winning homebrewers.</p>
+        </header>
+
+        <div class="brew-classes__grid">
+
+          <article class="class-card reveal" aria-label="Introduction to Homebrewing class">
+            <div class="class-card__icon" aria-hidden="true"><i class="ph ph-graduation-cap"></i></div>
+            <span class="class-card__level">Beginner</span>
+            <h3 class="class-card__title">Intro to Homebrewing</h3>
+            <p class="class-card__desc">Learn the science and art of fermentation, sanitation, and your very first brew day. All equipment provided.</p>
+            <div class="class-card__meta">
+              <span class="class-card__meta-item"><i class="ph ph-clock" aria-hidden="true"></i> 3 Hours</span>
+              <span class="class-card__meta-item"><i class="ph ph-users" aria-hidden="true"></i> Max 8</span>
+              <span class="class-card__meta-item"><i class="ph ph-map-pin" aria-hidden="true"></i> In-Person</span>
+            </div>
+            <a href="services.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Learn more about Intro to Homebrewing class">Learn More</a>
+          </article>
+
+          <article class="class-card reveal reveal-delay-1" aria-label="All-Grain Brewing Masterclass">
+            <div class="class-card__icon" aria-hidden="true"><i class="ph ph-flask"></i></div>
+            <span class="class-card__level">Intermediate</span>
+            <h3 class="class-card__title">All-Grain Brewing</h3>
+            <p class="class-card__desc">Master the mash tun. Understand grain bills, water chemistry, and how to design your own recipes from scratch.</p>
+            <div class="class-card__meta">
+              <span class="class-card__meta-item"><i class="ph ph-clock" aria-hidden="true"></i> 6 Hours</span>
+              <span class="class-card__meta-item"><i class="ph ph-users" aria-hidden="true"></i> Max 6</span>
+              <span class="class-card__meta-item"><i class="ph ph-video-camera" aria-hidden="true"></i> Hybrid</span>
+            </div>
+            <a href="services.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Learn more about All-Grain Brewing class">Learn More</a>
+          </article>
+
+          <article class="class-card reveal reveal-delay-2" aria-label="Hop Lab Advanced class">
+            <div class="class-card__icon" aria-hidden="true"><i class="ph ph-leaf"></i></div>
+            <span class="class-card__level">Advanced</span>
+            <h3 class="class-card__title">Hop Lab: Advanced</h3>
+            <p class="class-card__desc">Deep dive into hop varieties, dry hopping, biotransformation, and building the perfect aroma profile for your IPAs.</p>
+            <div class="class-card__meta">
+              <span class="class-card__meta-item"><i class="ph ph-clock" aria-hidden="true"></i> 4 Hours</span>
+              <span class="class-card__meta-item"><i class="ph ph-users" aria-hidden="true"></i> Max 10</span>
+              <span class="class-card__meta-item"><i class="ph ph-video-camera" aria-hidden="true"></i> Online</span>
+            </div>
+            <a href="services.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Learn more about Hop Lab class">Learn More</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT TEASER
+    ═══════════════════════════════════════ -->
+    <section class="about-teaser section" id="about" aria-labelledby="about-teaser-title">
+      <div class="container">
+        <div class="about-teaser__grid">
+          <!-- Image side -->
+          <div class="about-teaser__img-wrap reveal">
+            <img src="https://images.unsplash.com/photo-1566633806827-5af151ef1f91?w=900&q=80&auto=format&fit=crop"
+                 alt="Brewer checking malt grain in a warmly lit homebrewing workshop"
+                 class="about-teaser__img" loading="lazy" width="900" height="1125" />
+            <div class="about-teaser__img-accent" aria-hidden="true"></div>
+            <!-- Floating badge -->
+            <div class="about-teaser__badge" style="inset-block-start:var(--space-6);inset-inline-end:-var(--space-5)">
+              <span class="about-teaser__badge-icon" aria-hidden="true">🍺</span>
+              <div>
+                <div class="about-teaser__badge-text">Est. 2012</div>
+                <div class="about-teaser__badge-sub">Crafting since day one</div>
+              </div>
+            </div>
+          </div>
+          <!-- Content side -->
+          <div class="about-teaser__content reveal reveal-delay-1">
+            <span class="section-eyebrow">Our Story</span>
+            <h2 class="section-title" id="about-teaser-title" style="text-align:start">Born in a Garage. Built for Brewers.</h2>
+            <p class="about-teaser__text">Supply Co. started with a beat-up kettle, a bag of pale malt, and an obsession with great beer. What began as a weekend hobby in 2012 grew into the Pacific Northwest's most-loved homebrewing community.</p>
+            <p class="about-teaser__text">Today we supply over 4,800 homebrewers with hand-sourced ingredients, curated equipment, and brewing education that goes far beyond a recipe card.</p>
+
+            <div class="about-teaser__features">
+              <div class="about-teaser__feature">
+                <i class="ph ph-check-circle about-teaser__feature-icon" aria-hidden="true"></i>
+                <span class="about-teaser__feature-text"><strong>Hand-sourced ingredients</strong> — direct relationships with hop farms and maltsters.</span>
+              </div>
+              <div class="about-teaser__feature">
+                <i class="ph ph-check-circle about-teaser__feature-icon" aria-hidden="true"></i>
+                <span class="about-teaser__feature-text"><strong>Expert-led classes</strong> — taught by BJCP-certified homebrewers.</span>
+              </div>
+              <div class="about-teaser__feature">
+                <i class="ph ph-check-circle about-teaser__feature-icon" aria-hidden="true"></i>
+                <span class="about-teaser__feature-text"><strong>Community-first</strong> — free recipe forum, monthly brew-alongs, and 24/7 chat support.</span>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn btn--primary" id="about-learn-more-btn">
+              Our Full Story <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FEATURES / HIGHLIGHTS
+    ═══════════════════════════════════════ -->
+    <section class="section section--alt" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">Why Supply Co.</span>
+          <h2 class="section-title" id="features-title">Built Different, Brewed Better</h2>
+          <p class="section-subtitle">We're not a warehouse. We're a brewing partner who's been in your shoes — and knows exactly what you need.</p>
+        </header>
+
+        <div class="grid-4" style="margin-block-start:var(--space-6)">
+
+          <div class="reveal" style="text-align:center;padding:var(--space-5)">
+            <div style="width:56px;height:56px;border-radius:50%;background:rgba(193,123,42,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-4);color:var(--color-primary);font-size:1.5rem">
+              <i class="ph ph-truck" aria-hidden="true"></i>
+            </div>
+            <h3 style="font-family:var(--font-heading);font-size:1.1rem;font-weight:var(--weight-h3);color:var(--color-text);margin-block-end:var(--space-2)">Fast Flat-Rate Shipping</h3>
+            <p style="font-size:var(--size-caption);color:var(--color-text-muted);line-height:1.65">Orders over $35 ship free. Most ingredients arrive in 1–3 days with cold packs for yeast.</p>
+          </div>
+
+          <div class="reveal reveal-delay-1" style="text-align:center;padding:var(--space-5)">
+            <div style="width:56px;height:56px;border-radius:50%;background:rgba(193,123,42,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-4);color:var(--color-primary);font-size:1.5rem">
+              <i class="ph ph-leaf" aria-hidden="true"></i>
+            </div>
+            <h3 style="font-family:var(--font-heading);font-size:1.1rem;font-weight:var(--weight-h3);color:var(--color-text);margin-block-end:var(--space-2)">Freshness Guaranteed</h3>
+            <p style="font-size:var(--size-caption);color:var(--color-text-muted);line-height:1.65">All hops vacuum-sealed and nitrogen-flushed. Malt milled to order. Yeast tested for viability.</p>
+          </div>
+
+          <div class="reveal reveal-delay-2" style="text-align:center;padding:var(--space-5)">
+            <div style="width:56px;height:56px;border-radius:50%;background:rgba(193,123,42,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-4);color:var(--color-primary);font-size:1.5rem">
+              <i class="ph ph-chats" aria-hidden="true"></i>
+            </div>
+            <h3 style="font-family:var(--font-heading);font-size:1.1rem;font-weight:var(--weight-h3);color:var(--color-text);margin-block-end:var(--space-2)">Brewer Support</h3>
+            <p style="font-size:var(--size-caption);color:var(--color-text-muted);line-height:1.65">Got a stuck ferment? Our team of real homebrewers is online 7 days a week to help troubleshoot.</p>
+          </div>
+
+          <div class="reveal reveal-delay-3" style="text-align:center;padding:var(--space-5)">
+            <div style="width:56px;height:56px;border-radius:50%;background:rgba(193,123,42,0.12);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-4);color:var(--color-primary);font-size:1.5rem">
+              <i class="ph ph-medal" aria-hidden="true"></i>
+            </div>
+            <h3 style="font-family:var(--font-heading);font-size:1.1rem;font-weight:var(--weight-h3);color:var(--color-text);margin-block-end:var(--space-2)">Award-Winning Recipes</h3>
+            <p style="font-size:var(--size-caption);color:var(--color-text-muted);line-height:1.65">85+ tested recipes developed by our in-house brew team and winning home brewers from competitions nationwide.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════ -->
+    <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">Reviews</span>
+          <h2 class="section-title" id="testimonials-title">Brewed With Love, Reviewed With Honesty</h2>
+          <p class="section-subtitle">Don't take our word for it — here's what our brewing community has to say.</p>
+        </header>
+
+        <div class="testimonials__carousel" aria-live="polite" aria-label="Customer testimonials">
+          <div class="testimonials__track" id="testimonials-track">
+
+            <article class="testimonial-card" aria-label="Testimonial from Marcus D.">
+              <div class="testimonial-card__stars" aria-label="5 stars">
+                <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i>
+              </div>
+              <blockquote class="testimonial-card__quote">"The IPA kit was absolutely dialed in. Every ingredient was fresh, proportions perfect. My first all-grain batch and it came out competition-worthy."</blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop&facepad=3" alt="Portrait of Marcus D." class="testimonial-card__avatar" width="44" height="44" loading="lazy" />
+                <div>
+                  <div class="testimonial-card__name">Marcus D.</div>
+                  <div class="testimonial-card__role">Home Brewer · Portland, OR</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card" aria-label="Testimonial from Sarah K.">
+              <div class="testimonial-card__stars" aria-label="5 stars">
+                <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i>
+              </div>
+              <blockquote class="testimonial-card__quote">"The Intro to Homebrewing class changed my weekend plans forever. Ellie, our instructor, was brilliant. I've brewed 8 batches since taking it."</blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&auto=format&fit=crop&facepad=3" alt="Portrait of Sarah K." class="testimonial-card__avatar" width="44" height="44" loading="lazy" />
+                <div>
+                  <div class="testimonial-card__name">Sarah K.</div>
+                  <div class="testimonial-card__role">Hobbyist · Seattle, WA</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card" aria-label="Testimonial from Tom R.">
+              <div class="testimonial-card__stars" aria-label="5 stars">
+                <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i>
+              </div>
+              <blockquote class="testimonial-card__quote">"Supply Co. is the real deal. Their yeast selection is unmatched, and the staff knows their stuff. My Hefeweizen was the best I've ever made."</blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80&auto=format&fit=crop&facepad=3" alt="Portrait of Tom R." class="testimonial-card__avatar" width="44" height="44" loading="lazy" />
+                <div>
+                  <div class="testimonial-card__name">Tom R.</div>
+                  <div class="testimonial-card__role">Experienced Brewer · Bend, OR</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card" aria-label="Testimonial from Priya M.">
+              <div class="testimonial-card__stars" aria-label="4 stars">
+                <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph ph-star" aria-hidden="true"></i>
+              </div>
+              <blockquote class="testimonial-card__quote">"I was nervous to start homebrewing alone, but Supply Co.'s beginner kit plus their community forum made it genuinely fun. Highly recommend to anyone curious!"</blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&auto=format&fit=crop&facepad=3" alt="Portrait of Priya M." class="testimonial-card__avatar" width="44" height="44" loading="lazy" />
+                <div>
+                  <div class="testimonial-card__name">Priya M.</div>
+                  <div class="testimonial-card__role">First-time Brewer · Vancouver, BC</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card" aria-label="Testimonial from Jake F.">
+              <div class="testimonial-card__stars" aria-label="5 stars">
+                <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i>
+              </div>
+              <blockquote class="testimonial-card__quote">"Fast shipping, excellent fresh hops, and the Oatmeal Stout kit is legitimately one of the best brewing kits money can buy. Will be back every season."</blockquote>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80&auto=format&fit=crop&facepad=3" alt="Portrait of Jake F." class="testimonial-card__avatar" width="44" height="44" loading="lazy" />
+                <div>
+                  <div class="testimonial-card__name">Jake F.</div>
+                  <div class="testimonial-card__role">Craft Brewer · Denver, CO</div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="testimonials__controls" aria-label="Carousel controls">
+          <button class="testimonials__btn testimonials__btn--prev" aria-label="Previous testimonials">
+            <i class="ph ph-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="testimonials__dots" role="tablist" aria-label="Testimonial page">
+            <button class="testimonials__dot active" role="tab" aria-selected="true" aria-label="Page 1"></button>
+            <button class="testimonials__dot" role="tab" aria-selected="false" aria-label="Page 2"></button>
+          </div>
+          <button class="testimonials__btn testimonials__btn--next" aria-label="Next testimonials">
+            <i class="ph ph-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FULL-WIDTH CTA
+    ═══════════════════════════════════════ -->
+    <section class="home-cta" id="cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="home-cta__inner">
+          <h2 class="home-cta__title" id="cta-title">Your Next Great Batch Starts Here</h2>
+          <p class="home-cta__subtitle">Join 4,800+ homebrewers who trust Supply Co. for their freshest ingredients, best recipes, and brewing support.</p>
+          <div class="home-cta__actions">
+            <a href="#kits" class="btn btn--dark btn--lg" id="cta-shop-btn">
+              <i class="ph ph-shopping-bag-open" aria-hidden="true"></i>
+              Shop Starter Kits
+            </a>
+            <a href="services.html" class="btn btn--lg" style="background:rgba(255,255,255,0.12);color:#fff;border:2px solid rgba(255,255,255,0.4);" id="cta-classes-btn">
+              Browse Classes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo" aria-label="Site Footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <div class="footer__brand-name">Supply Co.</div>
+          <p class="footer__brand-desc">Premium craft beer homebrewing ingredients, kits, and education. Built by brewers, for brewers since 2012.</p>
+          <div class="footer__socials" aria-label="Social Media Links">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest"><i class="ph ph-pinterest-logo" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer__heading">Quick Links</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html"    class="footer__link">Home</a></li>
+            <li><a href="about.html"    class="footer__link">About Us</a></li>
+            <li><a href="services.html" class="footer__link">Services</a></li>
+            <li><a href="blog.html"     class="footer__link">Blog</a></li>
+            <li><a href="contact.html"  class="footer__link">Contact</a></li>
+            <li><a href="404.html"      class="footer__link">404</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h3 class="footer__heading">Resources</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="#" class="footer__link">Beginner's Guide</a></li>
+            <li><a href="#" class="footer__link">Recipe Archive</a></li>
+            <li><a href="#" class="footer__link">Ingredient Glossary</a></li>
+            <li><a href="#" class="footer__link">Troubleshooting</a></li>
+            <li><a href="#" class="footer__link">Brew Calculator</a></li>
+            <li><a href="coming-soon.html" class="footer__link">Coming Soon</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="footer__heading">Stay Hoppy</h3>
+          <p class="footer__newsletter-text">Seasonal ingredient drops, exclusive recipes, and brewing tips — straight to your inbox.</p>
+          <form class="footer__newsletter-form" data-newsletter-form aria-label="Newsletter signup">
+            <label for="footer-email" class="sr-only">Email address</label>
+            <input type="email" id="footer-email" name="email" class="footer__newsletter-input" placeholder="your@email.com" aria-label="Your email address" required />
+            <button type="submit" class="footer__newsletter-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+          </form>
+          <div data-newsletter-msg style="display:none;font-size:var(--size-caption);color:var(--color-primary-light);margin-block-start:var(--space-2)" aria-live="polite"></div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2026 Supply Co. All rights reserved.</span>
+        <div class="footer__legal" role="list">
+          <a href="#" class="footer__legal-link" role="listitem">Privacy Policy</a>
+          <a href="#" class="footer__legal-link" role="listitem">Terms of Service</a>
+          <a href="#" class="footer__legal-link" role="listitem">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <!-- Main JS -->
+  <script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

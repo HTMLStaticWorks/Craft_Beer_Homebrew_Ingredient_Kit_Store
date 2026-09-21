@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Supply Co.</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Head back to the Supply Co. homebrewing shop." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .not-found__hop {
+      font-size: 5rem;
+      display: block;
+      margin-block-end: var(--space-3);
+      animation: float 3s ease-in-out infinite;
+    }
+    .not-found__links {
+      display: flex;
+      gap: var(--space-3);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Navbar -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Supply Co. Home">
+        <div class="navbar__logo-mark"><i class="ph ph-beer-bottle"></i></div>
+        <div class="navbar__logo-text">Supply Co.<span>Craft Homebrewing</span></div>
+      </a>
+      <div class="navbar__actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light mode" data-theme-icon>
+          <i class="ph ph-sun icon-sun" style="display:none"></i>
+          <i class="ph ph-moon icon-moon"></i>
+        </button>
+        <a href="index.html" class="btn btn--primary btn--sm">Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="not-found" aria-label="404 Page Not Found">
+      <div class="not-found__inner">
+        <span class="not-found__hop" aria-hidden="true">🍺</span>
+
+        <div class="not-found__number" aria-hidden="true">404</div>
+
+        <h1 class="not-found__title">Brew Day Gone Wrong</h1>
+        <p class="not-found__text">
+          Looks like this page has been lost to the mash tun. The URL you followed doesn't exist, has been moved, or maybe the hops went to our heads.<br/><br/>
+          Don't panic — your next great batch is just a click away.
+        </p>
+
+        <div class="not-found__links">
+          <a href="index.html" class="btn btn--primary btn--lg" id="nf-home-btn">
+            <i class="ph ph-house" aria-hidden="true"></i>
+            Back to Home
+          </a>
+          <a href="index.html#kits" class="btn btn--secondary btn--lg" id="nf-shop-btn">
+            <i class="ph ph-shopping-bag" aria-hidden="true"></i>
+            Shop Kits
+          </a>
+          <a href="blog.html" class="btn btn--sm" style="background:var(--color-bg-alt);border:1px solid var(--color-border);color:var(--color-text)" id="nf-blog-btn">
+            Read the Blog
+          </a>
+        </div>
+
+        <p style="margin-block-start:var(--space-7);font-size:var(--size-caption);color:var(--color-text-muted)">
+          Or <a href="contact.html" style="color:var(--color-primary)">contact us</a> if you think something is broken.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
