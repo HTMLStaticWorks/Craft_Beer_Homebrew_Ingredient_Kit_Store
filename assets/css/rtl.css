@@ -19,14 +19,22 @@
 
 /* Hamburger: drawer slides from left */
 [dir="rtl"] .drawer {
-  inset-inline-end: auto;
-  inset-inline-start: 0;
+  right: auto;
+  left: 0;
   transform: translateX(-100%);
-  box-shadow: 8px 0 40px rgba(0,0,0,0.2);
+  box-shadow: 8px 0 40px rgba(0, 0, 0, 0.2);
 }
 
 [dir="rtl"] .drawer.open {
   transform: translateX(0);
+  visibility: visible;
+}
+
+@media (min-width: 1025px) {
+  [dir="rtl"] .drawer,
+  [dir="rtl"] .drawer-overlay {
+    display: none !important;
+  }
 }
 
 /* Service card top border flips origin */
@@ -57,7 +65,7 @@
 }
 
 /* Footer newsletter form */
-[dir="rtl"] .footer__newsletter-form {
+[dir="rtl"] .footer__newsletter-fields {
   flex-direction: row-reverse;
 }
 
@@ -117,3 +125,6 @@
 /* Blog filters center stays center — no change needed */
 
 /* Auth card inherits logical CSS — no overrides needed */
+[dir="rtl"] .auth-nav__back i {
+  transform: scaleX(-1);
+}

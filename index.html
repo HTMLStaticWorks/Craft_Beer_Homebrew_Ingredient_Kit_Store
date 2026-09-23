@@ -6,6 +6,9 @@
   <title>Supply Co. — Craft Beer Homebrewing Ingredients & Kits</title>
   <meta name="description" content="Supply Co. is your premium craft beer homebrewing shop. Discover brewing kits, rare ingredients, equipment, and hands-on brew classes for beginners and experts." />
   <link rel="canonical" href="https://supplyco.brew/" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="assets/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script type="application/ld+json">
   {
@@ -45,8 +48,6 @@
         <a href="home2.html"    class="navbar__link">Home 2</a>
         <a href="about.html"    class="navbar__link">About Us</a>
         <a href="services.html" class="navbar__link">Services</a>
-        <a href="#kits"         class="navbar__link">Shop</a>
-        <a href="#recipes"      class="navbar__link">Recipes</a>
         <a href="blog.html"     class="navbar__link">Blog</a>
         <a href="contact.html"  class="navbar__link">Contact</a>
       </nav>
@@ -91,8 +92,6 @@
       <a href="home2.html"    class="drawer__link"><i class="ph ph-house-line"></i> Home 2</a>
       <a href="about.html"    class="drawer__link"><i class="ph ph-info"></i> About Us</a>
       <a href="services.html" class="drawer__link"><i class="ph ph-wrench"></i> Services</a>
-      <a href="#kits"         class="drawer__link"><i class="ph ph-shopping-bag"></i> Shop</a>
-      <a href="#recipes"      class="drawer__link"><i class="ph ph-book-open"></i> Recipes</a>
       <a href="blog.html"     class="drawer__link"><i class="ph ph-newspaper"></i> Blog</a>
       <a href="contact.html"  class="drawer__link"><i class="ph ph-envelope"></i> Contact</a>
     </nav>
@@ -104,7 +103,7 @@
       <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL">
         <i class="ph ph-arrows-left-right"></i>
       </button>
-      <a href="login.html" class="btn btn--primary" style="flex:1;justify-content:center">Login</a>
+      <a href="login.html" class="btn btn--primary" id="drawer-login-btn" style="flex:1;justify-content:center">Login</a>
     </div>
   </aside>
 
@@ -118,7 +117,7 @@
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="hero__grain" aria-hidden="true"></div>
 
-      <div class="container">
+      <div class="container hero__body">
         <div class="hero__content">
           <div class="hero__eyebrow">
             <span class="hero__eyebrow-line" aria-hidden="true"></span>
@@ -282,7 +281,7 @@
               <span class="class-card__meta-item"><i class="ph ph-users" aria-hidden="true"></i> Max 8</span>
               <span class="class-card__meta-item"><i class="ph ph-map-pin" aria-hidden="true"></i> In-Person</span>
             </div>
-            <a href="services.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Learn more about Intro to Homebrewing class">Learn More</a>
+            <a href="services.html" class="btn btn--secondary btn--sm" aria-label="Learn more about Intro to Homebrewing class">Learn More</a>
           </article>
 
           <article class="class-card reveal reveal-delay-1" aria-label="All-Grain Brewing Masterclass">
@@ -295,7 +294,7 @@
               <span class="class-card__meta-item"><i class="ph ph-users" aria-hidden="true"></i> Max 6</span>
               <span class="class-card__meta-item"><i class="ph ph-video-camera" aria-hidden="true"></i> Hybrid</span>
             </div>
-            <a href="services.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Learn more about All-Grain Brewing class">Learn More</a>
+            <a href="services.html" class="btn btn--secondary btn--sm" aria-label="Learn more about All-Grain Brewing class">Learn More</a>
           </article>
 
           <article class="class-card reveal reveal-delay-2" aria-label="Hop Lab Advanced class">
@@ -308,7 +307,7 @@
               <span class="class-card__meta-item"><i class="ph ph-users" aria-hidden="true"></i> Max 10</span>
               <span class="class-card__meta-item"><i class="ph ph-video-camera" aria-hidden="true"></i> Online</span>
             </div>
-            <a href="services.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Learn more about Hop Lab class">Learn More</a>
+            <a href="services.html" class="btn btn--secondary btn--sm" aria-label="Learn more about Hop Lab class">Learn More</a>
           </article>
 
         </div>
@@ -549,7 +548,15 @@
 
         <!-- Brand -->
         <div class="footer__brand">
-          <div class="footer__brand-name">Supply Co.</div>
+          <a href="index.html" class="footer__logo" aria-label="Supply Co. Home">
+            <div class="navbar__logo-mark" aria-hidden="true">
+              <i class="ph ph-beer-bottle"></i>
+            </div>
+            <div class="footer__logo-text">
+              Supply Co.
+              <span>Craft Homebrewing</span>
+            </div>
+          </a>
           <p class="footer__brand-desc">Premium craft beer homebrewing ingredients, kits, and education. Built by brewers, for brewers since 2012.</p>
           <div class="footer__socials" aria-label="Social Media Links">
             <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
@@ -590,9 +597,11 @@
           <h3 class="footer__heading">Stay Hoppy</h3>
           <p class="footer__newsletter-text">Seasonal ingredient drops, exclusive recipes, and brewing tips — straight to your inbox.</p>
           <form class="footer__newsletter-form" data-newsletter-form aria-label="Newsletter signup">
-            <label for="footer-email" class="sr-only">Email address</label>
-            <input type="email" id="footer-email" name="email" class="footer__newsletter-input" placeholder="your@email.com" aria-label="Your email address" required />
-            <button type="submit" class="footer__newsletter-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+            <label for="footer-email" class="footer__newsletter-label">Email address</label>
+            <div class="footer__newsletter-fields">
+              <input type="email" id="footer-email" name="email" class="footer__newsletter-input" placeholder="your@email.com" aria-label="Your email address" required />
+              <button type="submit" class="footer__newsletter-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+            </div>
           </form>
           <div data-newsletter-msg style="display:none;font-size:var(--size-caption);color:var(--color-primary-light);margin-block-start:var(--space-2)" aria-live="polite"></div>
         </div>
@@ -610,6 +619,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ph ph-arrow-up" aria-hidden="true"></i>
+  </button>
 
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>

@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Supply Co. | Talk to a Brewer</title>
   <meta name="description" content="Get in touch with the Supply Co. team. Book a class, ask a brewing question, or visit our Portland shop. We're here 7 days a week." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="assets/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -21,8 +24,6 @@
         <a href="home2.html"    class="navbar__link">Home 2</a>
         <a href="about.html"    class="navbar__link">About Us</a>
         <a href="services.html" class="navbar__link">Services</a>
-        <a href="index.html#kits" class="navbar__link">Shop</a>
-        <a href="home2.html#recipe-builder" class="navbar__link">Recipes</a>
         <a href="blog.html"     class="navbar__link">Blog</a>
         <a href="contact.html"  class="navbar__link active">Contact</a>
       </nav>
@@ -34,7 +35,7 @@
         <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL">
           <i class="ph ph-arrows-left-right"></i>
         </button>
-        <a href="login.html" class="btn btn--primary btn--sm">Login</a>
+        <a href="login.html" class="btn btn--primary btn--sm" id="nav-login-btn">Login</a>
         <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
           <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
         </button>
@@ -53,15 +54,13 @@
       <a href="home2.html"    class="drawer__link"><i class="ph ph-house-line"></i> Home 2</a>
       <a href="about.html"    class="drawer__link"><i class="ph ph-info"></i> About Us</a>
       <a href="services.html" class="drawer__link"><i class="ph ph-wrench"></i> Services</a>
-      <a href="index.html#kits" class="drawer__link"><i class="ph ph-shopping-bag"></i> Shop</a>
-      <a href="home2.html#recipe-builder" class="drawer__link"><i class="ph ph-book-open"></i> Recipes</a>
       <a href="blog.html"     class="drawer__link"><i class="ph ph-newspaper"></i> Blog</a>
       <a href="contact.html"  class="drawer__link active"><i class="ph ph-envelope"></i> Contact</a>
     </nav>
     <div class="drawer__footer">
       <button class="theme-toggle" data-theme-toggle data-theme-icon aria-label="Toggle theme"><i class="ph ph-sun icon-sun" style="display:none"></i><i class="ph ph-moon icon-moon"></i></button>
       <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
-      <a href="login.html" class="btn btn--primary" style="flex:1;justify-content:center">Login</a>
+      <a href="login.html" class="btn btn--primary" id="drawer-login-btn" style="flex:1;justify-content:center">Login</a>
     </div>
   </aside>
 
@@ -131,7 +130,7 @@
             </div>
 
             <!-- Social Links -->
-            <div style="margin-block-bottom:var(--space-5)">
+            <div style="margin-block-end:var(--space-6)">
               <div style="font-size:var(--size-caption);font-weight:var(--weight-label);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-block-end:var(--space-3)">Follow Along</div>
               <div style="display:flex;gap:var(--space-2)">
                 <a href="#" class="footer__social-link" aria-label="Instagram" style="background:var(--color-bg-alt);border-color:var(--color-border);color:var(--color-text)"><i class="ph ph-instagram-logo"></i></a>
@@ -218,6 +217,103 @@
         </div>
       </div>
     </section>
+    <!-- ═══════════════════════════════════════
+         FAQ SECTION
+    ═══════════════════════════════════════ -->
+    <section class="contact-faq" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section-header text-center">
+          <span class="section-eyebrow">Got Questions?</span>
+          <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Find quick answers about our homebrewing workshops, fresh ingredient shipping, equipment rentals, and shop visits.</p>
+        </header>
+
+        <div class="faq-accordion" role="region" aria-label="Frequently Asked Questions list">
+          
+          <div class="faq-item active">
+            <button class="faq-item__trigger" id="faq-trig-1" aria-expanded="true" aria-controls="faq-ans-1">
+              <span class="faq-item__question">What is the best way to start if I've never brewed before?</span>
+              <span class="faq-item__icon" aria-hidden="true"><i class="ph ph-plus"></i></span>
+            </button>
+            <div class="faq-item__content" id="faq-ans-1" role="region" aria-labelledby="faq-trig-1" style="max-height: 300px;">
+              <div class="faq-item__body">
+                We recommend starting with our 1-Gallon All-In-One Starter Kit and taking our <em>Intro to Homebrewing</em> workshop. In just 3 hours, you'll learn sanitization, extract brewing basics, and fermentation control hands-on with a BJCP-certified brewer.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__trigger" id="faq-trig-2" aria-expanded="false" aria-controls="faq-ans-2">
+              <span class="faq-item__question">How fresh are your hops, malts, and liquid yeast cultures?</span>
+              <span class="faq-item__icon" aria-hidden="true"><i class="ph ph-plus"></i></span>
+            </button>
+            <div class="faq-item__content" id="faq-ans-2" role="region" aria-labelledby="faq-trig-2">
+              <div class="faq-item__body">
+                All hops are nitrogen-flushed, vacuum-sealed in UV-blocking mylar foils, and stored at -10°F. Grains are custom-milled to order on the morning of dispatch, and live liquid yeast packs are shipped in insulated cold packaging with reusable ice packs.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__trigger" id="faq-trig-3" aria-expanded="false" aria-controls="faq-ans-3">
+              <span class="faq-item__question">Do you offer equipment rental or private group brew days?</span>
+              <span class="faq-item__icon" aria-hidden="true"><i class="ph ph-plus"></i></span>
+            </button>
+            <div class="faq-item__content" id="faq-ans-3" role="region" aria-labelledby="faq-trig-3">
+              <div class="faq-item__body">
+                Yes! We rent all-grain brewing rigs, counter-flow plate chillers, oxygenation kits, and commercial-grade CO2 draft equipment by the day or weekend. We also host private group brewing sessions for team building, birthdays, and private parties for up to 12 people.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__trigger" id="faq-trig-4" aria-expanded="false" aria-controls="faq-ans-4">
+              <span class="faq-item__question">What are your shipping policies and delivery timelines?</span>
+              <span class="faq-item__icon" aria-hidden="true"><i class="ph ph-plus"></i></span>
+            </button>
+            <div class="faq-item__content" id="faq-ans-4" role="region" aria-labelledby="faq-trig-4">
+              <div class="faq-item__body">
+                Orders submitted by 2:00 PM PST ship out the same business day. Standard delivery takes 2–4 business days across the continental US, and cold-chain priority is available for perishable yeast. All orders over $75 qualify for complimentary standard shipping.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__trigger" id="faq-trig-5" aria-expanded="false" aria-controls="faq-ans-5">
+              <span class="faq-item__question">Can I bring in my homemade beer for tasting and recipe advice?</span>
+              <span class="faq-item__icon" aria-hidden="true"><i class="ph ph-plus"></i></span>
+            </button>
+            <div class="faq-item__content" id="faq-ans-5" role="region" aria-labelledby="faq-trig-5">
+              <div class="faq-item__body">
+                We love tasting community brews! Stop by during shop hours or join our Thursday Open Tap session. Our brew team will taste your beer, evaluate clarity and off-flavors, and suggest actionable adjustments for your recipe and process.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__trigger" id="faq-trig-6" aria-expanded="false" aria-controls="faq-ans-6">
+              <span class="faq-item__question">What happens if my brew day goes wrong or an ingredient is defective?</span>
+              <span class="faq-item__icon" aria-hidden="true"><i class="ph ph-plus"></i></span>
+            </button>
+            <div class="faq-item__content" id="faq-ans-6" role="region" aria-labelledby="faq-trig-6">
+              <div class="faq-item__body">
+                We stand behind every pint with our 100% Brew Guarantee. If an ingredient is defective or your package arrives compromised, reach out within 30 days. We'll troubleshoot the issue with you and send a free replacement kit or full refund.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FAQ Bottom CTA -->
+        <div class="faq-footer">
+          <p class="faq-footer__text">Still have a question that isn't answered here?</p>
+          <a href="#contact-form" class="btn btn--secondary btn--sm" id="faq-ask-btn">
+            <i class="ph ph-chat-circle-dots" aria-hidden="true"></i> Message Our Brewers
+          </a>
+        </div>
+
+      </div>
+    </section>
 
   </main>
 
@@ -225,7 +321,15 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <div class="footer__brand-name">Supply Co.</div>
+          <a href="index.html" class="footer__logo" aria-label="Supply Co. Home">
+            <div class="navbar__logo-mark" aria-hidden="true">
+              <i class="ph ph-beer-bottle"></i>
+            </div>
+            <div class="footer__logo-text">
+              Supply Co.
+              <span>Craft Homebrewing</span>
+            </div>
+          </a>
           <p class="footer__brand-desc">Premium craft beer homebrewing ingredients, kits, and education. Built by brewers, for brewers since 2012.</p>
           <div class="footer__socials">
             <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
@@ -255,10 +359,12 @@
         <div>
           <h3 class="footer__heading">Stay Hoppy</h3>
           <p class="footer__newsletter-text">Seasonal drops, recipes & brewing tips.</p>
-          <form class="footer__newsletter-form" data-newsletter-form>
-            <label for="footer-email-ct" class="sr-only">Email</label>
-            <input type="email" id="footer-email-ct" class="footer__newsletter-input" placeholder="your@email.com" required />
-            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+          <form class="footer__newsletter-form" data-newsletter-form aria-label="Newsletter signup">
+            <label for="footer-email-ct" class="footer__newsletter-label">Email address</label>
+            <div class="footer__newsletter-fields">
+              <input type="email" id="footer-email-ct" name="email" class="footer__newsletter-input" placeholder="your@email.com" aria-label="Your email address" required />
+              <button type="submit" class="footer__newsletter-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+            </div>
           </form>
           <div data-newsletter-msg style="display:none;font-size:var(--size-caption);color:var(--color-primary-light);margin-block-start:var(--space-2)"></div>
         </div>
@@ -272,6 +378,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ph ph-arrow-up" aria-hidden="true"></i>
+  </button>
 
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
   <script src="assets/js/main.js" defer></script>

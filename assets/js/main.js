@@ -54,6 +54,13 @@ const RTL_KEY = 'supplyco-rtl';
 function applyRTL(isRTL) {
   document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
   localStorage.setItem(RTL_KEY, isRTL ? '1' : '0');
+
+  // Ensure drawer is closed when switching layout direction
+  document.querySelector('.drawer')?.classList.remove('open');
+  document.querySelector('.drawer-overlay')?.classList.remove('open');
+  document.querySelector('.hamburger')?.classList.remove('open');
+  document.body.style.overflow = '';
+
   // load rtl.css if not already loaded
   const existingLink = document.getElementById('rtl-stylesheet');
   if (isRTL && !existingLink) {
@@ -119,6 +126,7 @@ function initDrawer() {
 
   function openDrawer() {
     hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
     drawer.classList.add('open');
     overlay?.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -127,6 +135,7 @@ function initDrawer() {
 
   function closeDrawer() {
     hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
     drawer.classList.remove('open');
     overlay?.classList.remove('open');
     document.body.style.overflow = '';
@@ -599,7 +608,7 @@ function initNewsletterForms() {
     form.addEventListener('submit', e => {
       e.preventDefault();
       const input   = form.querySelector('input[type="email"]');
-      const msgEl   = form.querySelector('[data-newsletter-msg]');
+      const msgEl   = form.querySelector('[data-newsletter-msg]') || form.parentElement?.querySelector('[data-newsletter-msg]');
 
       if (!input || !validateEmail(input.value.trim())) {
         if (input) input.style.borderColor = '#D94040';
@@ -622,6 +631,78 @@ function initTouchSwipe() {
   // swipe support is already in carousel; could extend here if needed
 }
 
+/* ── 16. BACK TO TOP BUTTON ── */
+function initBackToTop() {
+  let btn = document.getElementById('back-to-top');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'back-to-top';
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.setAttribute('title', 'Back to top');
+    btn.innerHTML = '<i class="ph ph-arrow-up" aria-hidden="true"></i>';
+    document.body.appendChild(btn);
+  }
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 350) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+/* ── 16. FAQ ACCORDION ── */
+function initFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-item__trigger');
+    const content = item.querySelector('.faq-item__content');
+    if (!trigger || !content) return;
+
+    if (item.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+
+    trigger.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+
+      faqItems.forEach(other => {
+        if (other !== item && other.classList.contains('active')) {
+          other.classList.remove('active');
+          const otherTrigger = other.querySelector('.faq-item__trigger');
+          const otherContent = other.querySelector('.faq-item__content');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+          if (otherContent) otherContent.style.maxHeight = null;
+        }
+      });
+
+      if (isOpen) {
+        item.classList.remove('active');
+        trigger.setAttribute('aria-expanded', 'false');
+        content.style.maxHeight = null;
+      } else {
+        item.classList.add('active');
+        trigger.setAttribute('aria-expanded', 'true');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+}
+
 /* ── INIT ── */
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -639,4 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initAuthForm();
   initNewsletterForms();
+  initBackToTop();
+  initFAQ();
 });
+

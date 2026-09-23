@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Supply Co. — Home 2 | Explore Ingredients & Recipes</title>
   <meta name="description" content="Discover craft brewing ingredients, build your own recipe, and explore the Supply Co. community. A different way to experience homebrewing." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="assets/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <header class="navbar" id="navbar" role="banner">
+  <header class="navbar navbar--hero" id="navbar" role="banner">
     <div class="container navbar__inner">
       <a href="index.html" class="navbar__logo" aria-label="Supply Co. Home">
         <div class="navbar__logo-mark"><i class="ph ph-beer-bottle"></i></div>
@@ -21,8 +24,6 @@
         <a href="home2.html"    class="navbar__link active">Home 2</a>
         <a href="about.html"    class="navbar__link">About Us</a>
         <a href="services.html" class="navbar__link">Services</a>
-        <a href="index.html#kits" class="navbar__link">Shop</a>
-        <a href="#recipe-builder" class="navbar__link">Recipes</a>
         <a href="blog.html"     class="navbar__link">Blog</a>
         <a href="contact.html"  class="navbar__link">Contact</a>
       </nav>
@@ -34,7 +35,7 @@
         <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL layout">
           <i class="ph ph-arrows-left-right"></i>
         </button>
-        <a href="login.html" class="btn btn--primary btn--sm">Login</a>
+        <a href="login.html" class="btn btn--primary btn--sm" id="nav-login-btn">Login</a>
         <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
           <span class="hamburger__line"></span>
           <span class="hamburger__line"></span>
@@ -55,8 +56,6 @@
       <a href="home2.html"    class="drawer__link active"><i class="ph ph-house-line"></i> Home 2</a>
       <a href="about.html"    class="drawer__link"><i class="ph ph-info"></i> About Us</a>
       <a href="services.html" class="drawer__link"><i class="ph ph-wrench"></i> Services</a>
-      <a href="index.html#kits" class="drawer__link"><i class="ph ph-shopping-bag"></i> Shop</a>
-      <a href="#recipe-builder" class="drawer__link"><i class="ph ph-book-open"></i> Recipes</a>
       <a href="blog.html"     class="drawer__link"><i class="ph ph-newspaper"></i> Blog</a>
       <a href="contact.html"  class="drawer__link"><i class="ph ph-envelope"></i> Contact</a>
     </nav>
@@ -66,7 +65,7 @@
         <i class="ph ph-moon icon-moon"></i>
       </button>
       <button class="rtl-toggle" data-rtl-toggle aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
-      <a href="login.html" class="btn btn--primary" style="flex:1;justify-content:center">Login</a>
+      <a href="login.html" class="btn btn--primary" id="drawer-login-btn" style="flex:1;justify-content:center">Login</a>
     </div>
   </aside>
 
@@ -87,11 +86,11 @@
         <p class="hero2__subtitle">
           We stock the rarest hops, freshest malts, and most adventurous yeasts — so your ideas become legendary batches.
         </p>
-        <div class="hero2__actions">
-          <a href="index.html#kits" class="btn btn--primary btn--lg" id="hero2-shop-btn" style="width:100%;justify-content:center">
+        <div class="hero2__actions" style="display: flex; flex-direction: row; gap: 1rem; align-items: center;">
+          <a href="index.html#kits" class="btn btn--primary btn--lg" id="hero2-shop-btn" style="justify-content:center; flex: 1;">
             <i class="ph ph-shopping-bag-open" aria-hidden="true"></i> Shop Kits
           </a>
-          <a href="services.html" class="btn btn--lg" style="background:rgba(255,255,255,0.06);color:rgba(240,235,224,0.85);border:1.5px solid rgba(255,255,255,0.2);width:100%;justify-content:center;" id="hero2-classes-btn">
+          <a href="services.html" class="btn btn--lg" style="background:rgba(255,255,255,0.06);color:rgba(240,235,224,0.85);border:1.5px solid rgba(255,255,255,0.2);justify-content:center; flex: 1;" id="hero2-classes-btn">
             Browse Classes
           </a>
         </div>
@@ -294,7 +293,7 @@
               <span class="card__eyebrow" style="color:var(--color-primary-light)">Beginner</span>
               <h3 class="card__title" style="color:var(--color-white)">How to Prevent Off-Flavors in Your First Batch</h3>
               <p class="card__text" style="color:rgba(240,235,224,0.65)">The 7 most common beginner mistakes and exactly how to avoid them. Saves you from pouring your first batch down the drain.</p>
-              <a href="blog-single.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Read about preventing off-flavors">Read Article</a>
+              <a href="blog-single.html" class="btn btn--secondary btn--sm" aria-label="Read about preventing off-flavors">Read Article</a>
             </div>
           </article>
 
@@ -305,7 +304,7 @@
               <span class="card__eyebrow" style="color:var(--color-primary-light)">Advanced</span>
               <h3 class="card__title" style="color:var(--color-white)">Dry Hopping Techniques: Cold Side vs. Warm Side</h3>
               <p class="card__text" style="color:rgba(240,235,224,0.65)">We tested both methods across 12 batches. Here's exactly what the data says — and which approach wins for juicy IPA aroma.</p>
-              <a href="blog-single.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Read about dry hopping techniques">Read Article</a>
+              <a href="blog-single.html" class="btn btn--secondary btn--sm" aria-label="Read about dry hopping techniques">Read Article</a>
             </div>
           </article>
 
@@ -316,7 +315,7 @@
               <span class="card__eyebrow" style="color:var(--color-primary-light)">Recipe</span>
               <h3 class="card__title" style="color:var(--color-white)">The Perfect Summer Wheat: Our 2026 Hefeweizen Recipe</h3>
               <p class="card__text" style="color:rgba(240,235,224,0.65)">Clove, banana, and a hazy summer glow. This recipe has been brewed over 400 times by our community. Now it's yours.</p>
-              <a href="blog-single.html" class="btn btn--secondary btn--sm" style="color:var(--color-primary-light);border-color:var(--color-primary);" aria-label="Read the Hefeweizen recipe">Read Article</a>
+              <a href="blog-single.html" class="btn btn--secondary btn--sm" aria-label="Read the Hefeweizen recipe">Read Article</a>
             </div>
           </article>
 
@@ -349,7 +348,15 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <div class="footer__brand-name">Supply Co.</div>
+          <a href="index.html" class="footer__logo" aria-label="Supply Co. Home">
+            <div class="navbar__logo-mark" aria-hidden="true">
+              <i class="ph ph-beer-bottle"></i>
+            </div>
+            <div class="footer__logo-text">
+              Supply Co.
+              <span>Craft Homebrewing</span>
+            </div>
+          </a>
           <p class="footer__brand-desc">Premium craft beer homebrewing ingredients, kits, and education. Built by brewers, for brewers since 2012.</p>
           <div class="footer__socials">
             <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
@@ -380,10 +387,12 @@
         <div>
           <h3 class="footer__heading">Stay Hoppy</h3>
           <p class="footer__newsletter-text">Get seasonal drops, recipes & brewing tips.</p>
-          <form class="footer__newsletter-form" data-newsletter-form>
-            <label for="footer-email-h2" class="sr-only">Email</label>
-            <input type="email" id="footer-email-h2" class="footer__newsletter-input" placeholder="your@email.com" required />
-            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+          <form class="footer__newsletter-form" data-newsletter-form aria-label="Newsletter signup">
+            <label for="footer-email-h2" class="footer__newsletter-label">Email address</label>
+            <div class="footer__newsletter-fields">
+              <input type="email" id="footer-email-h2" name="email" class="footer__newsletter-input" placeholder="your@email.com" aria-label="Your email address" required />
+              <button type="submit" class="footer__newsletter-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+            </div>
           </form>
           <div data-newsletter-msg style="display:none;font-size:var(--size-caption);color:var(--color-primary-light);margin-block-start:var(--space-2)"></div>
         </div>
@@ -397,6 +406,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="ph ph-arrow-up" aria-hidden="true"></i>
+  </button>
 
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
   <script src="assets/js/main.js" defer></script>

@@ -55,6 +55,7 @@ supply-co/
 - ✅ **Testimonials carousel** with dots + arrow controls
 - ✅ **Blog filter** by category (all/beginner/advanced/recipe/equipment)
 - ✅ **Countdown timer** (coming-soon.html)
+- ✅ **Interactive FAQ Accordion** with accessible keyboard nav (contact.html)
 - ✅ **Full form validation** — contact, login, register
 - ✅ **Dark / Light mode** toggle — persisted via localStorage
 - ✅ **RTL support** — `dir="rtl"` toggled, drawer slides from LEFT
