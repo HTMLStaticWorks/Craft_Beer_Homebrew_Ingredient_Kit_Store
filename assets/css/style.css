@@ -260,18 +260,20 @@ p {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-2);
   padding: 14px 32px;
   font-family: var(--font-body);
   font-size: var(--size-btn);
   font-weight: var(--weight-btn);
-  line-height: 1;
+  line-height: 1.2;
   border-radius: var(--radius);
   transition: all var(--transition);
   cursor: pointer;
   border: 2px solid transparent;
   letter-spacing: 0.01em;
   will-change: transform;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -2759,6 +2761,7 @@ p {
   border: 1px solid var(--color-border);
   transition: all var(--transition);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .blog-filter-btn:hover,
@@ -3260,6 +3263,50 @@ p {
   box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.12);
 }
 
+/* Password Input Wrap & Toggle Eye Button */
+.form-input-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.form-input-wrap .form-input {
+  padding-inline-end: 46px;
+  width: 100%;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  inset-inline-end: 12px;
+  background: none;
+  border: none;
+  padding: 6px;
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), opacity var(--transition), transform var(--transition);
+  user-select: none;
+}
+
+.password-toggle-btn:hover {
+  color: var(--color-primary);
+}
+
+.password-toggle-btn:active {
+  transform: scale(0.92);
+}
+
+.password-toggle-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .form-error {
   display: none;
   font-size: var(--size-caption);
@@ -3305,6 +3352,12 @@ p {
 .form-checkbox__label a {
   color: var(--color-primary);
   text-decoration: underline;
+}
+
+[dir="rtl"] .form-checkbox {
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: start;
 }
 
 .form-success {
@@ -3562,6 +3615,7 @@ p {
   cursor: pointer;
   transition: all var(--transition);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .auth-social-btn:hover {
@@ -4022,6 +4076,34 @@ p {
   }
   .drawer__footer .btn {
     display: inline-flex !important;
+    white-space: nowrap !important;
+  }
+
+  /* Button sizing & single-line guarantee on tablet */
+  .btn {
+    white-space: nowrap !important;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+  .btn--lg {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+  .btn--sm {
+    padding: 8px 16px;
+    font-size: var(--size-caption);
+  }
+
+  .hero2__actions {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .hero2__actions .btn {
+    flex: 1 1 200px;
+    max-width: 280px;
+    justify-content: center;
   }
 
   .hero__title { font-size: clamp(1.9rem, 5vw, 2.75rem); }

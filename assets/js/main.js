@@ -67,7 +67,7 @@ function applyRTL(isRTL) {
     const link = document.createElement('link');
     link.id   = 'rtl-stylesheet';
     link.rel  = 'stylesheet';
-    link.href = 'assets/css/rtl.css';
+    link.href = 'assets/css/rtl.css?v=2';
     document.head.appendChild(link);
   } else if (!isRTL && existingLink) {
     existingLink.remove();
@@ -476,7 +476,7 @@ function validateEmail(email) {
 
 function setFieldState(input, state, message) {
   input.classList.remove('error', 'success');
-  const errorEl = input.parentElement?.querySelector('.form-error');
+  const errorEl = input.closest('.form-group')?.querySelector('.form-error') || input.parentElement?.querySelector('.form-error');
 
   if (state === 'error') {
     input.classList.add('error');
@@ -491,7 +491,7 @@ function setFieldState(input, state, message) {
 
 function clearFieldState(input) {
   input.classList.remove('error', 'success');
-  const errorEl = input.parentElement?.querySelector('.form-error');
+  const errorEl = input.closest('.form-group')?.querySelector('.form-error') || input.parentElement?.querySelector('.form-error');
   if (errorEl) errorEl.classList.remove('visible');
 }
 
@@ -629,6 +629,32 @@ function initAuthForm() {
       }
     });
   }
+
+  initPasswordToggles();
+}
+
+function initPasswordToggles() {
+  const toggleBtns = document.querySelectorAll('[data-toggle-password]');
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = btn.getAttribute('data-toggle-password');
+      const input = document.getElementById(targetId);
+      if (!input) return;
+
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+
+      const icon = btn.querySelector('i');
+      if (icon) {
+        icon.className = isPassword ? 'ph ph-eye-slash' : 'ph ph-eye';
+      }
+
+      btn.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+      btn.setAttribute('aria-pressed', isPassword ? 'true' : 'false');
+      input.focus();
+    });
+  });
 }
 
 /* ── 14. NEWSLETTER FORMS ── */

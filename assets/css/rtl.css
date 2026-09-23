@@ -121,10 +121,11 @@
   flex-shrink: 0;
 }
 
-/* Form checkbox alignment */
+/* Form checkbox alignment: in RTL mode, checkbox is on the right side and label text is to the left */
 [dir="rtl"] .form-checkbox {
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: start;
 }
 
 /* Ingredient card content */
