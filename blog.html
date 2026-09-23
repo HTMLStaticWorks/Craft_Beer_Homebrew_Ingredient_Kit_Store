@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="alternate icon" type="image/png" href="assets/favicon-32x32.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=2" />
 </head>
 <body>
 
@@ -66,13 +66,20 @@
 
   <main id="main-content">
 
-    <!-- BLOG HERO + FILTERS -->
+    <!-- BLOG HERO -->
     <section class="blog-hero" aria-labelledby="blog-title">
       <div class="container">
         <span class="section-eyebrow">The Brew Journal</span>
         <h1 class="section-title" id="blog-title" style="margin-block-end:var(--space-3)">Brewing Knowledge, Straight Up</h1>
         <p class="section-subtitle">Recipes, technique guides, equipment reviews, and stories from our community of passionate homebrewers.</p>
+      </div>
+    </section>
 
+    <!-- BLOG GRID -->
+    <section class="blog-grid" aria-label="Blog articles">
+      <div class="container">
+
+        <!-- Category Filters -->
         <div class="blog-filters" role="tablist" aria-label="Filter articles by category">
           <button class="blog-filter-btn active" data-filter="all" role="tab" aria-selected="true">All Posts</button>
           <button class="blog-filter-btn" data-filter="beginner" role="tab" aria-selected="false">Beginner</button>
@@ -80,12 +87,7 @@
           <button class="blog-filter-btn" data-filter="recipe" role="tab" aria-selected="false">Recipes</button>
           <button class="blog-filter-btn" data-filter="equipment" role="tab" aria-selected="false">Equipment</button>
         </div>
-      </div>
-    </section>
 
-    <!-- BLOG GRID -->
-    <section class="blog-grid" aria-label="Blog articles">
-      <div class="container">
         <div class="blog-grid__layout" id="blog-grid">
 
           <article class="blog-card reveal" data-category="beginner" aria-label="Article: How to Prevent Off-Flavors">

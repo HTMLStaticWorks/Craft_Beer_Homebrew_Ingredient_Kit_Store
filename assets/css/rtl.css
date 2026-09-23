@@ -58,10 +58,32 @@
 }
 
 /* Timeline: RTL flip */
-[dir="rtl"] .timeline__track::before {
-  inset-inline-start: auto;
-  inset-inline-end: 50%;
-  transform: translateX(50%);
+@media (min-width: 1025px) {
+  [dir="rtl"] .timeline__track::before {
+    inset-inline-start: auto;
+    inset-inline-end: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  [dir="rtl"] .timeline__track::before {
+    inset-inline-start: auto;
+    inset-inline-end: 24px;
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 480px) {
+  [dir="rtl"] .timeline__track::before {
+    inset-inline-end: 21px;
+  }
+}
+
+@media (max-width: 360px) {
+  [dir="rtl"] .timeline__track::before {
+    inset-inline-end: 18px;
+  }
 }
 
 /* Footer newsletter form */

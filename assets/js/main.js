@@ -234,7 +234,7 @@ function initScrollReveal() {
 /* ── 8. TESTIMONIALS CAROUSEL ── */
 function initTestimonialsCarousel() {
   const track = document.querySelector('.testimonials__track');
-  const dots   = document.querySelectorAll('.testimonials__dot');
+  const dotsContainer = document.querySelector('.testimonials__dots');
   const prevBtn = document.querySelector('.testimonials__btn--prev');
   const nextBtn = document.querySelector('.testimonials__btn--next');
 
@@ -255,20 +255,43 @@ function initTestimonialsCarousel() {
   function getCardWidth() {
     const card = cards[0];
     if (!card) return 0;
-    return card.offsetWidth + 20; // 20 = gap approx
+    const style = window.getComputedStyle(card);
+    const margin = parseFloat(style.marginInlineEnd) || parseFloat(style.marginRight) || 16;
+    return card.offsetWidth + margin;
+  }
+
+  function updateDots() {
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('button');
+      dot.className = `testimonials__dot${i === current ? ' active' : ''}`;
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-selected', i === current ? 'true' : 'false');
+      dot.setAttribute('aria-label', `Page ${i + 1}`);
+      dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); });
+      dotsContainer.appendChild(dot);
+    }
   }
 
   function goTo(index) {
     visible = getVisibleCount();
     total   = Math.ceil(cards.length / visible);
     current = Math.max(0, Math.min(index, total - 1));
+    const isRtl = document.documentElement.dir === 'rtl' || document.documentElement.getAttribute('dir') === 'rtl';
     const offset = current * visible * getCardWidth();
-    track.style.transform = `translateX(-${offset}px)`;
+    track.style.transform = isRtl ? `translateX(${offset}px)` : `translateX(-${offset}px)`;
 
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.testimonials__dot') : [];
+    dots.forEach((dot, i) => {
+      const isActive = i === current;
+      dot.classList.toggle('active', isActive);
+      dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
   }
 
   function startAuto() {
+    stopAuto();
     autoInterval = setInterval(() => goTo((current + 1) % total), 5000);
   }
 
@@ -279,24 +302,30 @@ function initTestimonialsCarousel() {
   prevBtn?.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
   nextBtn?.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
 
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); });
-  });
-
-  track.addEventListener('touchstart', e => { stopAuto(); }, { passive: true });
-
   let touchStartX = 0;
-  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchstart', e => {
+    stopAuto();
+    if (e.touches && e.touches[0]) touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+
   track.addEventListener('touchend', e => {
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) {
-      goTo(diff > 0 ? current + 1 : current - 1);
+    if (e.changedTouches && e.changedTouches[0]) {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        goTo(diff > 0 ? current + 1 : current - 1);
+      }
     }
     startAuto();
   });
 
-  window.addEventListener('resize', () => { goTo(0); });
+  window.addEventListener('resize', () => {
+    visible = getVisibleCount();
+    total   = Math.ceil(cards.length / visible);
+    updateDots();
+    goTo(0);
+  });
 
+  updateDots();
   goTo(0);
   startAuto();
 }
